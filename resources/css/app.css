@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Sora';
+    src: url('/font/Sora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('/font/Sora-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Rest of your existing styles */
+.homegutter .gx-5 > .col {
+    /* Existing styles */
+    font-family: 'Sora', sans-serif; /* Apply Sora font to the desired elements */
+}

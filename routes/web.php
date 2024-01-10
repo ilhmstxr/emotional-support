@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('maps');
+    return view('menu');
 });
 
 
-// Route::get('/maps',function ()  {
-//     return view('maps');
-// });
+Route::get('/maps',function ()  {
+    return view('maps');
+});
