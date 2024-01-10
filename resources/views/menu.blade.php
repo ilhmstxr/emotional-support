@@ -18,6 +18,7 @@
     <div class="carousel-item active">
         <img src="{{('/img/bgcrhome.png')}}" class="d-block w-100" alt="home">
         <div class="carousel-caption d-none d-md-block">
+        <img src="{{('/img/karusel.png')}}" class=" w-50" style="text-align:center" alt="home">
             <h3 class="hpoppins" style="color: #2BDDEA;">
                 Ruang Aman Untuk Berbagi Cerita, Mendapat Dukungan, dan Belajar Tentang Kesehatan Mental.
             </h3>
@@ -136,8 +137,14 @@
                     <img src="{{('/img/logofb.png')}}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
                 </a>
                 <br>
-                <a href="#">
-                <img src="{{('/img/logoig.png')}}" alt="ig" width="50px" class="p-2"> 
+                <a>
+                <img src="{{('/img/logoig.png')}}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()"> 
+                <script>
+                function openLinkInNewTab() {
+                var linkToOpen = 'https://www.instagram.com/azztqy_';
+                window.open(linkToOpen, '_blank');
+                }
+                </script>
                 </a>
             </div>
         </div>
