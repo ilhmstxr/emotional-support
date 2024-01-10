@@ -19,6 +19,21 @@ class MenuController extends Controller
         return view('curhat');
     }
 
+    public function indexJT()
+    {
+        return view('janjitemu');
+    }
+    
+    public function indexCO()
+    {
+        return view('curhatonline');
+    }
+
+    public function indexPsikolog()
+    {
+        return view('psikolog');    
+    }
+
     /**
      * Show the form for creating a new resource.
      */
