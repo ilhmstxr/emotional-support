@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('menu');
 });
 
+
+Route::get('/maps',function ()  {
+    return view('maps');
+});
 Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
 Route::get('/curhat', [App\Http\Controllers\MenuController::class, 'indexCurhat'])->name('curhat');
