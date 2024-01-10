@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::get('/', function () {
 Route::get('/maps',function ()  {
     return view('maps');
 });
+Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
+Route::get('/curhat', [App\Http\Controllers\MenuController::class, 'indexCurhat'])->name('curhat');
