@@ -4,6 +4,7 @@ const getCurrentPosition = () => {
             (position) => {
                 latitude = position.coords.latitude;
                 longitude = position.coords.longitude;
+
                 resolve();
             },
             (error) => {
@@ -19,30 +20,32 @@ const getCurrentPosition = () => {
 
 let map;
 
-async function initMap() {
-    const currentPosition = await getCurrentPosition();
+const initMap = async () => {
+    await getCurrentPosition();
 
-    // console.log(latitude);
-    // console.log(longitude);
-
-    pos = {
+    // position in coordinate
+    const pos = {
         lat: latitude,
         lng: longitude,
     };
 
+    // get location
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
         center: { lat: latitude, lng: longitude },
     });
 
+    // marker
     new google.maps.Marker({
         position: pos,
         map,
     });
 
+    // fetching api's
     const geocoder = new google.maps.Geocoder();
     const infoWindow = new google.maps.InfoWindow();
 
+    // to find the address
     geocoder
         .geocode({
             location: pos,
@@ -56,13 +59,20 @@ async function initMap() {
                     map: map,
                 });
 
-                infoWindow.setContent(response.results[0].formatted_address);
+                let address = response.results[0].formatted_address;
+
+                // putting the address in location
+                document.getElementById("yourLocation").value = address;
+
+                infoWindow.setContent(address);
                 infoWindow.open(map, marker);
             } else {
                 infoWindow.setContent(pos);
                 infoWindow.open(map, marker);
             }
         });
-}
+};
+
+
 
 window.initMap = initMap;
