@@ -34,7 +34,8 @@
             <form action="">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Your Location</label>
-                    <input type="text" class="form-control" id="yourLocation" aria-describedby="emailHelp" value="">
+                    <input type="text" class="form-control" id="yourLocation" aria-describedby="emailHelp"
+                        value="">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Cost that you want</label>
@@ -116,6 +117,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <script>
+          
         </script>
 </body>
 

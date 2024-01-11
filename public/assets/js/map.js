@@ -1,3 +1,5 @@
+const apiKey = "AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI";
+
 const getCurrentPosition = () => {
     return new Promise((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(
@@ -73,6 +75,35 @@ const initMap = async () => {
         });
 };
 
+const find = async () => {
+    try {
+        await getCurrentPosition();
 
+        const pos = {
+            lat: latitude,
+            lng: longitude,
+        };
 
+        const response = await fetch(
+            `https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${apiKey}&location=${pos.lat},${pos.lng}&radius=500&type=user_defined_place_type`,
+            { mode: "no-cors" }
+        );
+        const data = await response.json();
+
+        const nearbyUsers = data.results.map((place) => ({
+            name: place.name,
+            address: place.vicinity,
+            latitude: place.geometry.location.lat,
+            longitude: place.geometry.location.lng,
+        }));
+
+        // console.log("done");
+        console.log(nearbyUsers);
+        console.log("done");
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+find();
 window.initMap = initMap;
