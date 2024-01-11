@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\location;
+use App\Models\meetingPoint;
 use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class MeetingPointController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class LocationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(location $location)
+    public function show(meetingPoint $meetingPoint)
     {
         //
     }
@@ -42,7 +42,7 @@ class LocationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(location $location)
+    public function edit(meetingPoint $meetingPoint)
     {
         //
     }
@@ -50,7 +50,7 @@ class LocationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, location $location)
+    public function update(Request $request, meetingPoint $meetingPoint)
     {
         //
     }
@@ -58,7 +58,7 @@ class LocationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(location $location)
+    public function destroy(meetingPoint $meetingPoint)
     {
         //
     }

@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/maps',function ()  {
+Route::get('/maps', function () {
     return view('maps');
 });
 
@@ -37,3 +37,4 @@ Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonl
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
 
 // Route::resource('/menu', MenuController::class); 
+
