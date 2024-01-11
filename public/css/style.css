@@ -63,8 +63,6 @@
         background-image: url('/img/footerbg.png'); 
         background-size: cover; 
         padding: 20px;
-        /* padding-left: 0;
-        padding-right: 0; */
         z-index: 0;
         background-position: bottom;
         background-repeat: no-repeat;
@@ -101,7 +99,7 @@
     /* View Mobile */
     /* View Mobile */
     /* View Mobile */
-    
+
 /* @media (min-width: 576p){
     .homegutter{
 
