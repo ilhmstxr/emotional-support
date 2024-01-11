@@ -13,14 +13,14 @@
 
     <div class="bgfooter-text pb-2 pt-5 ps-5 ">
     <div class="row">
-        <div class="col-6">
-            <a href="#" class="no-underline">
+        <div class="col-5">
+            <a href="/menu" class="no-underline">
             <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
             </a>
-            <p class="pSora text-light pe-5">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
+            <p class="pSora text-light pe-3">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
         </div>
 
-        <div class="col-6 footer-grid pe-5">
+        <div class="col-6 footer-grid px-5">
             <div class="link-terkait">
                 <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
                 <ul class="list-group list-group-flush bg-transparent text-start">
@@ -42,7 +42,7 @@
                 </ul>
             </div>
 
-            <div class="social-media col-8 text-center">
+            <div class="social-media col-8 text-center ps-5">
                 <h6 class="hpoppins text-light">Social Media</h6>
                 <a href="#">
                     <img src="{{('/img/logofb.png')}}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
@@ -58,6 +58,12 @@
                 </script>
                 </a>
             </div>
+                
+                <div class="col">
+                    <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="130">
+                </div>
+                
+            
         </div>
     </div>
 

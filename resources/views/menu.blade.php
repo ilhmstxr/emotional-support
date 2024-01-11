@@ -27,6 +27,7 @@
     <div class="carousel-item">
         <img src="{{('/img/bgcrhome.png')}}" class="d-block w-100" alt="home2">
         <div class="carousel-caption d-none d-md-block">
+        <img src="{{('/img/karusel.png')}}" class=" w-50" style="text-align:center" alt="home">
             <h3 class="hpoppins" style="color: #2D9CDB;">
             Tempat yang aman untuk berbagi pengalaman, mendapatkan dukungan, dan memperoleh pengetahuan seputar kesehatan mental.
             </h3>
@@ -50,18 +51,18 @@
 <div class="container overflow-hidden text-center mx-10 py-4">
   <div class="row gx-5 px-5">
     <div class="col text-center">
-        <img src="{{('/img/lovebiru.png')}}" width="85px">
+        <img src="{{('/img/homeG1.png')}}" width="105px" class="p-3">
      <div class="p-3" style="font-weight: bold;">Cerita Dimana Saja dan Kapan Saja</div>
      <div class=""><p>Saatnya pilih cara curhat paling nyaman untukmu. Bisa tatap muka maupun online, semua pasti bisa!</p></div>
     </div>
     <div class="col">
-    <img src="{{('/img/lovebiru.png')}}" width="85px">
+    <img src="{{('/img/homeG2.png')}}" width="75px" class="p-2">
       <div class="p-3" style="font-weight: bold;">Kamu Bercerita, Kami Jaga Rahasia</div>
       <div class=""><p>Tidak perlu khawatir, curhat tentang apa pun akan dijamin keamanannya.</p></div>
     </div>
     <div class="col">
-    <img src="{{('/img/lovebiru.png')}}" width="85px">
-      <div class="p-3" style="font-weight: bold;">Tuangkan Isi Hati Pada Yang Ahli</div>
+    <img src="{{('/img/homeG3.png')}}" width="85px" class="pt-4 pb-3">
+      <div class="p-3" style="font-weight: bold;">Tuangkan Isi Hati Pada Yang Ahli Dengan Harga Terjangkau</div>
       <div class=""><p>Bebas ceritakan masalahmu dari berbagai topik pada 900+ sobat SHEA berpengalaman.</p></div>
     </div>
   </div>
