@@ -15,7 +15,7 @@
 
 
 
-    @include('layouts.footer')
+
     @endsection    
 </body>
 </html>
