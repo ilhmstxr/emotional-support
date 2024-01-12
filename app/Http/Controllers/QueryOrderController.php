@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\chat;
+use App\Models\queryOrder;
 use Illuminate\Http\Request;
 
-class ChatController extends Controller
+class QueryOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ChatController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(chat $chat)
+    public function show(queryOrder $queryOrder)
     {
         //
     }
@@ -42,7 +42,7 @@ class ChatController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(chat $chat)
+    public function edit(queryOrder $queryOrder)
     {
         //
     }
@@ -50,7 +50,7 @@ class ChatController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, chat $chat)
+    public function update(Request $request, queryOrder $queryOrder)
     {
         //
     }
@@ -58,7 +58,7 @@ class ChatController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(chat $chat)
+    public function destroy(queryOrder $queryOrder)
     {
         //
     }

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class TransactionController extends Controller
 {
+    public function check_order(){
+        
+    }
     /**
      * Display a listing of the resource.
      */
