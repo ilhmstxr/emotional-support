@@ -23,7 +23,7 @@ class MenuController extends Controller
     }
 
 
-    public function getRandomUniqueNumber()
+    function getRandomUniqueNumber()
     {
         $minRand  = 100000000000;
         $maxRand  = 999999999999;
@@ -39,6 +39,8 @@ class MenuController extends Controller
             }
             $check = false;
         } while ($check);
+
+        return $randomNumber;
     }
 
 
@@ -48,6 +50,8 @@ class MenuController extends Controller
         // pending 
         $date = today()->format('d-m-Y');
 
+        $id = getRandomUniqueNumber();
+        return $id;
         // $id = $date->format('dmy');
 
         // return $date;
