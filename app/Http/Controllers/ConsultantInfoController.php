@@ -2,44 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\isNumberUsed;
-use App\Models\transaction;
-use Carbon\Carbon;
+use App\Models\consultantInfo;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class ConsultantInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('menu');
-    }
-
-    public function indexCurhat()
-    {
-        return view('curhat');
-    }
-
-
-    public function indexJT()
-    {
-        // pending 
-        $date = today()->format('d-m-Y');
-
-        $compact = ['date'];
-        return view('janjitemu', compact($compact));
-    }
-
-    public function indexCO()
-    {
-        return view('curhatonline');
-    }
-
-    public function indexPsikolog()
-    {
-        return view('psikolog');
+        //
     }
 
     /**
@@ -61,7 +34,7 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(consultantInfo $consultantInfo)
     {
         //
     }
@@ -69,7 +42,7 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(consultantInfo $consultantInfo)
     {
         //
     }
@@ -77,7 +50,7 @@ class MenuController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, consultantInfo $consultantInfo)
     {
         //
     }
@@ -85,7 +58,7 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(consultantInfo $consultantInfo)
     {
         //
     }
