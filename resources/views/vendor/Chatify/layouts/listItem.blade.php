@@ -10,8 +10,8 @@
             </td>
             {{-- center side --}}
             <td>
-                <p data-id="{{ Auth::user()->id }}" data-type="user">Saved Messages <span>You</span></p>
-                <span>Save messages secretly</span>
+                <p data-id="{{ Auth::user()->id }}" data-type="user">Pesan Tersimpan <span>Anda</span></p>
+                <span>Simpan Pesan Secara Rahasia</span>
             </td>
         </tr>
     </table>
