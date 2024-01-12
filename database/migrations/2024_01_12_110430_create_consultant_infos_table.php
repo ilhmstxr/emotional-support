@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('consultant_infos', function (Blueprint $table) {
             $table->id();
             $table->integer('price');
+            $table->string('degree');
+            $table->string('expert_in');
+            $table->integer('sessions');
+            $table->integer('helped');
             $table->foreignId('consultant_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });

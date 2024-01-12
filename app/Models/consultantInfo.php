@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class consultantInfo extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
+    public function user() {
+        return $this->belongsTo(User::class,'consultant_id');
+    }
 }
