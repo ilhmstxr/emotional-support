@@ -9,6 +9,7 @@
 
     <title>{{ config('app.title', 'SHEA') }}</title>
     <link rel="icon" href="{{'img/logoSHEA.png'}}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -54,7 +55,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
