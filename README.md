@@ -1,3 +1,38 @@
+
+## SCREENSHOT APLIKASI
+Menu Landing:
+![menuLandingPage](https://github.com/ilhmstxr/emotional-support/assets/117576792/3b6335e6-aefe-4076-8308-aa1c3f44a0e1)
+![MenuLandingPage2](https://github.com/ilhmstxr/emotional-support/assets/117576792/59f392f5-1392-4981-961e-ccf864f81a48)
+![MenuLandingPage3](https://github.com/ilhmstxr/emotional-support/assets/117576792/0b257d34-1044-4690-82c1-5aa65a2bcf5c)
+
+Login & Register:
+![Login](https://github.com/ilhmstxr/emotional-support/assets/117576792/2fa974f2-1250-4e5b-8f63-882e1820ed7d)
+![Register](https://github.com/ilhmstxr/emotional-support/assets/117576792/902dc778-bdd5-41a4-b774-51e4694753cc)
+
+Curhat:
+![Curhat](https://github.com/ilhmstxr/emotional-support/assets/117576792/57c0024e-a03f-4e88-baae-75a97cb7bb79)
+![CurhatOnline](https://github.com/ilhmstxr/emotional-support/assets/117576792/f140b853-8816-49bb-9355-581ab8364bbe)
+![Chat](https://github.com/ilhmstxr/emotional-support/assets/117576792/7ab60e21-6cce-4857-b239-667506c9bfa5)
+![JanjiTemu](https://github.com/ilhmstxr/emotional-support/assets/117576792/261e036b-c100-4711-ae48-3b9d47bf32fa)
+![JanjiTemu2](https://github.com/ilhmstxr/emotional-support/assets/117576792/c4f31f74-a7cf-4dc4-b0e5-a92234da2b83)
+
+List Psikolog:
+![Psikolog](https://github.com/ilhmstxr/emotional-support/assets/117576792/0bcb6a2d-bf89-4004-837a-4cb9ba21537b)
+
+## SETUP
+
+Sebelum memakai aplikasi ini jalankan perintah berikut pada terminal:
+- composer install
+- npm install
+- konfigurasi database (menyesuaikan)
+- konfigurasi pusher (menyeseuaikan)
+- php artisan migrate:fresh --seed
+
+Jika Ingin menjalankan aplikasi ini jalankan perintah berikut pada terminal setelah menjalankan perintah diatas :
+- npm run dev
+- php artisan serve
+
+
 ## HIT PAHIT MEMBER
 -  Haura Taqiya Azza Nabila As Hustler
 -  Aril Ponco Nugroho As Hipster
