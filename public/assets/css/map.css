@@ -5,7 +5,7 @@
 .mapsCanvas{
     height: calc(100ch - 56px);
     width: 100;
-    margin-bottom: 500px;
+    margin-bottom: 400px;
     /* height: 300px;
     width: 300px; */
 }

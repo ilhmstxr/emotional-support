@@ -9,71 +9,132 @@
 </head>
 <body>
     @section('content')
-    <div class="d-block p-5 text-center">
+    <div class="container d-block p-5 text-center">
     <a href="/curhatonline" class="btn hpoppins" style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
         Curhat Online
     </a>
     <a href="/janjitemu" class="btn  hpoppins " style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
         Janji Temu
     </a>
+    </div>
+
+    <h2 class="hpoppins text-center" style="color: #2D9CDB;">Yuk Tuangkan Isi Hatimu </h2>
+    <h2 class="hpoppins text-center" style="color: #2D9CDB;">Dengan Curhat Secara Online Dengan Mitra Kami</h2>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md4">
+                <form action="#" method="GET" class="mb-3">
+                    <div class="input-group">
+                    <input type="text" class="form-control" name="search" placeholder="Cari Psikolog">
+                    <button type="submit" class="btn btn-outline-primary"><img src="{{'img/searchglass.png'}}" width="30px"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container text-center">
+<div class="row row-cols-2">
+    <div class="col">
+        <div class="d-block" style="border-color:black; border-width: 1px 1px 1px 1px; border-style:solid">
+            <img src="{{'img/profile.png'}}" width="200px">
+                <div class="container text-start" >
+                    <div class="pSora" style="font-weight: bold;">Kim Bab, M.Psi, Psikolog</div>
+                    <p class="pSora ">Psikologi Mental</p>
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.6 (100)</p>
+                     <h4 class="pSora" style="font-weight: bold;">Rp 50.000</h4>
+                        <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
+                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
+                            <button class="bbutton-outline pSora" style="font-weight:500;">Curhat Online</button>
+                        </div>
+                        
+                </div>                
+        </div>
+    </div>
+
+    
+
+    <div class="col">
+        <div class="d-block" style="border-color:black; border-width: 1px 1px 1px 1px; border-style:solid">
+            <img src="{{'img/profile.png'}}" width="200px">
+                <div class="container text-start" >
+                    <div class="pSora" style="font-weight: bold;">Ram Yeon, M.Psi, Psikolog</div>
+                    <p class="pSora ">Psikologi Komunitas</p>
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.8 (79)</p>
+                     <h4 class="pSora" style="font-weight: bold;">Rp 35.000</h4>
+                        <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
+                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
+                            <button class="busybutton-outline pSora" style="font-weight:500;">Sibuk</button>
+                        </div>
+                        
+                </div>                
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="d-block" style="border-color:black; border-width: 1px 1px 1px 1px; border-style:solid">
+            <img src="{{'img/profile.png'}}" width="200px">
+                <div class="container text-start" >
+                    <div class="pSora" style="font-weight: bold;">Sam Gyetang, M.Psi, Psikolog</div>
+                    <p class="pSora ">Psikologi Pikiran</p>
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.5 (150)</p>
+                     <h4 class="pSora" style="font-weight: bold;">Rp 45.000</h4>
+                        <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
+                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
+                            <button class="bbutton-outline pSora" style="font-weight:500;">Curhat Online</button>
+                        </div>
+                        
+                </div>                
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="d-block" style="border-color:black; border-width: 1px 1px 1px 1px; border-style:solid">
+            <img src="{{'img/profile.png'}}" width="200px">
+                <div class="container text-start" >
+                    <div class="pSora" style="font-weight: bold;">Bul Dak, M.Psi, Psikolog</div>
+                    <p class="pSora ">Psikologi Mental</p>
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <img src="{{'img/star.png'}}" width="20px">
+                     <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.9 (20)</p>
+                     <h4 class="pSora" style="font-weight: bold;">Rp 40.000</h4>
+                        <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
+                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
+                            <button class="busybutton-outline pSora" style="font-weight:500;">Sibuk</button>
+                        </div>
+                        
+                </div>                
+        </div>
+    </div>
+
+</div>
 </div>
 
-<div class="bgfooter-text pb-2 pt-5 ps-5 ">
-    <div class="row">
-        <div class="col-6">
-            <a href="#" class="no-underline">
-            <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
-            </a>
-            <p class="pSora text-light pe-5">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
-        </div>
-
-        <div class="col-6 footer-grid pe-5">
-            <div class="link-terkait">
-                <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
-                <ul class="list-group list-group-flush bg-transparent text-start">
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="/menu" style="color: #FFFFFF;">Beranda</a>
-                </li>
-            
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="/curhat" style="color: #FFFFFF;">Curhat</a>
-                </li>
-
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Forum</a>
-                </li>
-
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Top Up</a>
-                </li>
-                </ul>
-            </div>
-
-            <div class="social-media col-8 text-center">
-                <h6 class="hpoppins text-light">Social Media</h6>
-                <a href="#">
-                    <img src="{{('/img/logofb.png')}}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
-                </a>
-                <br>
-                <a>
-                <img src="{{('/img/logoig.png')}}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()"> 
-                <script>
-                function openLinkInNewTab() {
-                var linkToOpen = 'https://www.instagram.com/azztqy_';
-                window.open(linkToOpen, '_blank');
-                }
-                </script>
-                </a>
-            </div>
-        </div>
     </div>
 
-    <div class="line pt-2"></div>
 
-    <div class="container pSora text-center text-light" >
-        <p>Copyright © SHEA 2024</p>
-    </div>
 
+@include('layouts.footer')
     @endsection
 </body>
 </html>

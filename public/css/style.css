@@ -91,10 +91,39 @@
         margin-bottom: 10px; /* Add margin for better spacing, adjust as needed */
     }
 
-    .no-underline {
+.no-underline {
         text-decoration: none; /* Remove underline */
     }
 
+.wbutton-outline{
+    color: #2D9CDB;
+    background-color: #FFFFFF;
+    border-color: #2D9CDB;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.bbutton-outline{
+    color: #FFFFFF;
+    background-color: #2D9CDB;
+    border-color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.busybutton-outline{
+    color: #FFFFFF;
+    background-color: #FFAA4A;
+    border-color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
 
     /* View Mobile */
     /* View Mobile */

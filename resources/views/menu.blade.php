@@ -27,6 +27,7 @@
     <div class="carousel-item">
         <img src="{{('/img/bgcrhome.png')}}" class="d-block w-100" alt="home2">
         <div class="carousel-caption d-none d-md-block">
+        <img src="{{('/img/karusel.png')}}" class=" w-50" style="text-align:center" alt="home">
             <h3 class="hpoppins" style="color: #2D9CDB;">
             Tempat yang aman untuk berbagi pengalaman, mendapatkan dukungan, dan memperoleh pengetahuan seputar kesehatan mental.
             </h3>
@@ -50,18 +51,18 @@
 <div class="container overflow-hidden text-center mx-10 py-4">
   <div class="row gx-5 px-5">
     <div class="col text-center">
-        <img src="{{('/img/lovebiru.png')}}" width="85px">
+        <img src="{{('/img/homeG1.png')}}" width="105px" class="p-3">
      <div class="p-3" style="font-weight: bold;">Cerita Dimana Saja dan Kapan Saja</div>
      <div class=""><p>Saatnya pilih cara curhat paling nyaman untukmu. Bisa tatap muka maupun online, semua pasti bisa!</p></div>
     </div>
     <div class="col">
-    <img src="{{('/img/lovebiru.png')}}" width="85px">
+    <img src="{{('/img/homeG2.png')}}" width="75px" class="p-2">
       <div class="p-3" style="font-weight: bold;">Kamu Bercerita, Kami Jaga Rahasia</div>
       <div class=""><p>Tidak perlu khawatir, curhat tentang apa pun akan dijamin keamanannya.</p></div>
     </div>
     <div class="col">
-    <img src="{{('/img/lovebiru.png')}}" width="85px">
-      <div class="p-3" style="font-weight: bold;">Tuangkan Isi Hati Pada Yang Ahli</div>
+    <img src="{{('/img/homeG3.png')}}" width="85px" class="pt-4 pb-3">
+      <div class="p-3" style="font-weight: bold;">Tuangkan Isi Hati Pada Yang Ahli Dengan Harga Terjangkau</div>
       <div class=""><p>Bebas ceritakan masalahmu dari berbagai topik pada 900+ sobat SHEA berpengalaman.</p></div>
     </div>
   </div>
@@ -180,69 +181,8 @@
     <button type="button" href="#" class="btn hpoppins" style="background-color: #2D9CDB; color:#FFFFFF;">Lihat Semua</button>
 </div>
 
+@include('layouts.footer')
 
-<!-- FOOTER -->
-<!-- FOOTER -->
-<!-- FOOTER -->
-
-<div class="bgfooter-text pb-2 pt-5 ps-5 ">
-    <div class="row">
-        <div class="col-6">
-            <a href="#" class="no-underline">
-            <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
-            </a>
-            <p class="pSora text-light pe-5">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
-        </div>
-
-        <div class="col-6 footer-grid pe-5">
-            <div class="link-terkait">
-                <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
-                <ul class="list-group list-group-flush bg-transparent text-start">
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Beranda</a>
-                </li>
-            
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Curhat</a>
-                </li>
-
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Forum</a>
-                </li>
-
-                <li class="list-group-item">
-                <a class="pSora no-underline" href="#" style="color: #FFFFFF;">Top Up</a>
-                </li>
-                </ul>
-            </div>
-
-            <div class="social-media col-8 text-center">
-                <h6 class="hpoppins text-light">Social Media</h6>
-                <a href="#">
-                    <img src="{{('/img/logofb.png')}}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
-                </a>
-                <br>
-                <a>
-                <img src="{{('/img/logoig.png')}}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()"> 
-                <script>
-                function openLinkInNewTab() {
-                var linkToOpen = 'https://www.instagram.com/azztqy_';
-                window.open(linkToOpen, '_blank');
-                }
-                </script>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="line pt-2"></div>
-
-    <div class="container pSora text-center text-light" >
-        <p>Copyright © SHEA 2024</p>
-    </div>
-    
-
-</div>
 @endsection
 </body>
 </html>
