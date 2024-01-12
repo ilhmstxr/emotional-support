@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,8 @@ Route::get('/janjitemu',function ()  {
 
 
 Route::get('/menu', [MenuController::class,'index'])->name('menu');
+Route::get('/register', [AuthController::class,'indexRegister'])->name('registerpage');
+Route::get('/login', [AuthController::class,'indexLogin'])->name('loginpage');
 Route::get('/curhat', [MenuController::class, 'indexCurhat'])->name('curhat');
 Route::get('/janjitemu', [MenuController::class, 'indexJT'])->name('janjitemu');
 Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonline');
@@ -38,3 +41,7 @@ Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolo
 
 // Route::resource('/menu', MenuController::class); 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
