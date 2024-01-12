@@ -29,10 +29,10 @@
                             <a class="nav-link" href="/psikolog">Psikolog</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/forum">Forum</a>
+                            <a class="nav-link" href="/">Forum</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/topup">Top Up</a>
+                            <a class="nav-link" href="/">Hubungi Kami</a>
                         </li>
                     </ul>
                     <div class="button group p-auto">
