@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('diskusi', function (Blueprint $table) {
+        Schema::create('query_orders', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('konsumen_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->integer('price');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('diskusi');
+        Schema::dropIfExists('query_orders');
     }
 };

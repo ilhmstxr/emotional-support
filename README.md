@@ -1,3 +1,4 @@
+
 ## SCREENSHOT APLIKASI
 Menu Landing:
 ![menuLandingPage](https://github.com/ilhmstxr/emotional-support/assets/117576792/3b6335e6-aefe-4076-8308-aa1c3f44a0e1)
@@ -31,11 +32,13 @@ Jika Ingin menjalankan aplikasi ini jalankan perintah berikut pada terminal sete
 - npm run dev
 - php artisan serve
 
+
 ## HIT PAHIT MEMBER
 -  Haura Taqiya Azza Nabila As Hustler
 -  Aril Ponco Nugroho As Hipster
 -  Ilham Bintang Herlambang As Hacker
 -  Putra Hikmah Febryan As Hacker
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 

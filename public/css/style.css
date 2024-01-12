@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Sora';
+    src: url('/font/Sora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/font/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('/font/Sora-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.hpoppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.pSora{
+    font-family: 'Sora', sans-serif;
+}
+
+.homegutter{
+    padding-left: 0px;
+}
+
+
+.homegutter .gx-5 > .col {
+    font-family: 'Sora', sans-serif;
+}
+
+
+    .homegutter .gx-5 > .col {
+        border-style: solid;
+        border-color: black;
+        border-radius: 5px;
+        border-width: 1px 1px 1px 1px;
+        padding: 10px;
+
+    }
+    .homegutter .gx-5 > .col + .col {
+        margin-left: 1.5rem; 
+        }
+
+    .textJ{
+        text-align: justify;
+    }
+
+    .bgfooter-text{
+        background-image: url('/img/footerbg.png'); 
+        background-size: cover; 
+        padding: 20px;
+        z-index: 0;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    
+}
+
+    .bgfooter-text .list-group-item {
+        background-color: transparent;
+        border: none; 
+    }
+
+    .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+.listNoDots{
+    list-style: none;
+}
+
+
+.line {
+        border-bottom: 1px solid white; /* Add a white bottom border with 1px thickness */
+        margin-bottom: 10px; /* Add margin for better spacing, adjust as needed */
+    }
+
+.no-underline {
+        text-decoration: none; /* Remove underline */
+    }
+
+.wbutton-outline{
+    color: #2D9CDB;
+    background-color: #FFFFFF;
+    border-color: #2D9CDB;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.bbutton-outline{
+    color: #FFFFFF;
+    background-color: #2D9CDB;
+    border-color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.busybutton-outline{
+    color: #FFFFFF;
+    background-color: #FFAA4A;
+    border-color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+    /* View Mobile */
+    /* View Mobile */
+    /* View Mobile */
+
+/* @media (min-width: 576p){
+    .homegutter{
+
+        margin:50px ;
+        
+    }
+
+}     */
