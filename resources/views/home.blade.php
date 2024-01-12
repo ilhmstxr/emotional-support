@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header bg-primary text-light">{{ __('') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Anda Berhasil Login!') }}
+
+                    <a href="/menu" class="wbutton-outline hpoppins" style="font-weight: bold;" role="button">Kembali Ke Menu</a>
+
                 </div>
             </div>
         </div>
