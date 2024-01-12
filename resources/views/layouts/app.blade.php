@@ -20,9 +20,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light text-light bg-primary shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #2D9CDB; color:#FFFFFF">
             <div class="container">
-                <a class="navbar-brand text-light" href="{{ url('/') }}">
+                <a class="navbar-brand text-light hpoppins" href="{{ url('/') }}">
                     {{ config('app.title', 'SHEA') }}
                 </a>
 
@@ -39,7 +39,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto hpoppins">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
