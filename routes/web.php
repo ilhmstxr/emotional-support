@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,5 +37,6 @@ Route::get('/janjitemu', [MenuController::class, 'indexJT'])->name('janjitemu');
 Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonline');
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
 
-// Route::resource('/menu', MenuController::class); 
 
+
+// Route::resource('/menu', MenuController::class); 
