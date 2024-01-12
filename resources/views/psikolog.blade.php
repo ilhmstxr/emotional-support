@@ -12,7 +12,6 @@
 <body>
     @section('content')
 
-    
     <div class="homegutter">
     <div class="container overflow-hidden">
 
@@ -82,8 +81,6 @@
 </div>
 
 </div>
-
-    @include('layouts.footer')
     
     @endsection
 </body>

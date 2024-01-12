@@ -11,16 +11,16 @@
 </head>
 <body>
     <div class="hpoppins">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-2">
             <div class="container-fluid">
-                <a class="navbar-brand ms-2" href="#">
+                <a class="navbar-brand ms-2" href="/">
                     <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="40">
                 </a>
-                <a class="navbar-brand ms-2" style="color: #2D9CDB; font-weight:700" href="#">SHEA</a>
+                <a class="navbar-brand ms-2" style="color: #2D9CDB; font-weight:700" href="/">SHEA</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link me-5" aria-current="page" href="/menu" style="color: #2D9CDB; font-weight:650;">Beranda</a>
+                            <a class="nav-link me-5" aria-current="page" href="/" style="color: #2D9CDB; font-weight:650;">Beranda</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link" href="/curhat">Curhat</a>
@@ -36,14 +36,105 @@
                         </li>
                     </ul>
                     <div class="button group p-auto">
-                    <a href="/register" type="button" class="btn btn-outline me-3" style="color : #2D9CDB; border-color : #2D9CDB; ">Daftar</a>
-                    <a href="/login" type="button" class="btn" style="color : #FFFFFF; background-color : #2D9CDB; ">Masuk</a>
-                    </div>
+
+                    @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item listNoDots">
+                                <a href="/login" type="button" class="bbutton-outline no-underline" style="color : #FFFFFF; background-color : #2D9CDB; list-style:none; ">Masuk</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item listNoDots">
+                                <a href="/register" type="button" class="wbutton-outline no-underline" style="color : #2D9CDB; border-color : #2D9CDB; background-color :#FFFFFF;">Daftar</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown listNoDots">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:#2D9CDB" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                </div>
                   </div>
             </div>
         </nav>
     </div>
-
     <div class="container">
         @yield('content')
+    </div>
+
+    <div class="bgfooter-text pb-2 pt-5 ps-5 mt-2 ">
+    <div class="row">
+        <div class="col-5">
+            <a href="/menu" class="no-underline">
+            <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
+            </a>
+            <p class="pSora text-light pe-3">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
+        </div>
+
+        <div class="col-6 footer-grid px-5">
+            <div class="link-terkait">
+                <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
+                <ul class="list-group list-group-flush bg-transparent text-start">
+                <li class="list-group-item">
+                <a class="pSora no-underline" href="/menu" style="color: #FFFFFF;">Beranda</a>
+                </li>
+            
+                <li class="list-group-item">
+                <a class="pSora no-underline" href="/curhat" style="color: #FFFFFF;">Curhat</a>
+                </li>
+
+                <li class="list-group-item">
+                <a class="pSora no-underline" href="/forum" style="color: #FFFFFF;">Forum</a>
+                </li>
+
+                <li class="list-group-item">
+                <a class="pSora no-underline" href="/topup" style="color: #FFFFFF;">Top Up</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="social-media col-8 text-center ps-5">
+                <h6 class="hpoppins text-light">Social Media</h6>
+                <a href="#">
+                    <img src="{{('/img/logofb.png')}}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
+                </a>
+                <br>
+                <a>
+                <img src="{{('/img/logoig.png')}}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()"> 
+                <script>
+                function openLinkInNewTab() {
+                var linkToOpen = 'https://www.instagram.com/azztqy_';
+                window.open(linkToOpen, '_blank');
+                }
+                </script>
+                </a>
+            </div>
+                
+                <div class="col">
+                    <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="130">
+                </div>
+                
+            
+        </div>
+    </div>
+
+    <div class="line pt-2"></div>
+
+    <div class="container pSora text-center text-light" >
+        <p>Copyright © SHEA 2024</p>
     </div>

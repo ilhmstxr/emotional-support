@@ -67,7 +67,7 @@
         <!-- MAPS -->
         <!-- MAPS -->
 
-        @include('layouts.footer')
+    
 
     @endsection
 

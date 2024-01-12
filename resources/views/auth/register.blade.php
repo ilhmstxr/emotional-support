@@ -5,11 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-primary text-light">{{ __('Daftar Akun') }}
+                <div class="card-header hpoppins" style="background-color: #2D9CDB; color:#FFFFFF;">{{ __('Daftar Akun') }}
                     <img src="{{'img/logoSHEA.png'}}" width="20px">
                 </div>
 
-                <div class="card-body">
+                <div class="card-body pSora">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -65,7 +65,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="bbutton-outline hpoppins">
                                     {{ __('Register') }}
                                 </button>
                             </div>

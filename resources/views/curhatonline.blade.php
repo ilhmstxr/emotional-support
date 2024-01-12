@@ -50,9 +50,10 @@
                      <img src="{{'img/star.png'}}" width="20px">
                      <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.6 (100)</p>
                      <h4 class="pSora" style="font-weight: bold;">Rp 50.000</h4>
-                        <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
-                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
-                            <button class="bbutton-outline pSora" style="font-weight:500;">Curhat Online</button>
+                        <div class="button-group text-center pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
+
+                            <button class="wbutton-outline no-underline pSora" style="font-weight:600;">Profile Lengkap</button>
+                            <button class="bbutton-outline no-underline pSora" style="font-weight:600;" onclick="redirectToChatify()">Curhat Online</button>
                         </div>
                         
                 </div>                
@@ -75,8 +76,8 @@
                      <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.8 (79)</p>
                      <h4 class="pSora" style="font-weight: bold;">Rp 35.000</h4>
                         <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
-                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
-                            <button class="busybutton-outline pSora" style="font-weight:500;">Sibuk</button>
+                            <button class="wbutton-outline pSora" style="font-weight:600;">Profile Lengkap</button>
+                            <button class="busybutton-outline pSora" style="font-weight:600;">Sibuk</button>
                         </div>
                         
                 </div>                
@@ -97,8 +98,8 @@
                      <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.5 (150)</p>
                      <h4 class="pSora" style="font-weight: bold;">Rp 45.000</h4>
                         <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
-                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
-                            <button class="bbutton-outline pSora" style="font-weight:500;">Curhat Online</button>
+                            <button class="wbutton-outline pSora" style="font-weight:600;">Profile Lengkap</button>
+                            <button class="bbutton-outline pSora" style="font-weight:600;">Curhat Online</button>
                         </div>
                         
                 </div>                
@@ -119,8 +120,8 @@
                      <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.9 (20)</p>
                      <h4 class="pSora" style="font-weight: bold;">Rp 40.000</h4>
                         <div class="button-group text-end pb-3 pt-0 d-grid gap-1 me-0 ms-auto">
-                            <button class="wbutton-outline pSora" style="font-weight:500;">Profile Lengkap</button>
-                            <button class="busybutton-outline pSora" style="font-weight:500;">Sibuk</button>
+                            <button class="wbutton-outline pSora" style="font-weight:600;">Profile Lengkap</button>
+                            <button class="busybutton-outline pSora" style="font-weight:600;">Sibuk</button>
                         </div>
                         
                 </div>                
@@ -132,9 +133,13 @@
 
     </div>
 
+    <script>
+    function redirectToChatify() {
+        window.location.href = '/chatify';
+    }
+</script>
 
 
-@include('layouts.footer')
     @endsection
 </body>
 </html>

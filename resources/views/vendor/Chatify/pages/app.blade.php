@@ -1,3 +1,5 @@
+@extends('layouts.navbar')
+@section('content')
 @include('Chatify::layouts.headLinks')
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
@@ -5,7 +7,7 @@
         {{-- Header and search bar --}}
         <div class="m-header">
             <nav>
-                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">MESSAGES</span> </a>
+                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">Pesan</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>
@@ -13,7 +15,7 @@
                 </nav>
             </nav>
             {{-- Search input --}}
-            <input type="text" class="messenger-search" placeholder="Search" />
+            <input type="text" class="messenger-search" placeholder="Cari" />
             {{-- Tabs --}}
             {{-- <div class="messenger-listView-tabs">
                 <a href="#" class="active-tab" data-view="users">
@@ -110,3 +112,6 @@
 
 @include('Chatify::layouts.modals')
 @include('Chatify::layouts.footerLinks')
+
+
+@endsection

@@ -181,7 +181,7 @@
     <button type="button" href="#" class="btn hpoppins" style="background-color: #2D9CDB; color:#FFFFFF;">Lihat Semua</button>
 </div>
 
-@include('layouts.footer')
+
 
 @endsection
 </body>

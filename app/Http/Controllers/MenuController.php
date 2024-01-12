@@ -41,6 +41,11 @@ class MenuController extends Controller
     {
         return view('psikolog');
     }
+    
+    public function indexChat()
+    {
+        return view('chatify');
+    }
 
     /**
      * Show the form for creating a new resource.

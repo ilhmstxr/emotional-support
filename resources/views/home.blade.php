@@ -16,7 +16,7 @@
 
                     {{ __('Anda Berhasil Login!') }}
 
-                    <a href="/menu" class="wbutton-outline hpoppins" style="font-weight: bold;" role="button">Kembali Ke Menu</a>
+                    <button href="/menu" class="wbutton-outline p-2  pSora" style="font-weight: 400px;" role="button">Kembali Ke Menu</button>
 
                 </div>
             </div>
