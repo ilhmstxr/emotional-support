@@ -35,9 +35,9 @@
                             <a class="nav-link" href="/topup">Top Up</a>
                         </li>
                     </ul>
-                    <div class="p-auto">
-                    <button type="button" class="btn btn-outline me-3" style="color : #2D9CDB; border-color : #2D9CDB; ">Daftar</button>
-                    <button type="button" class="btn" style="color : #FFFFFF; background-color : #2D9CDB; ">Masuk</button>
+                    <div class="button group p-auto">
+                    <a href="/register" type="button" class="btn btn-outline me-3" style="color : #2D9CDB; border-color : #2D9CDB; ">Daftar</a>
+                    <a href="/login" type="button" class="btn" style="color : #FFFFFF; background-color : #2D9CDB; ">Masuk</a>
                     </div>
                   </div>
             </div>

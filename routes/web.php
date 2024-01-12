@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TransactionController;
@@ -33,11 +35,18 @@ Route::get('/janjitemu',function ()  {
 
 
 Route::get('/menu', [MenuController::class,'index'])->name('menu');
+Route::get('/register', [AuthController::class,'indexRegister'])->name('registerpage');
+Route::get('/login', [AuthController::class,'indexLogin'])->name('loginpage');
 Route::get('/curhat', [MenuController::class, 'indexCurhat'])->name('curhat');
 Route::get('/janjitemu', [MenuController::class, 'indexJT'])->name('janjitemu');
 Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonline');
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
 
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('transaction', TransactionController::class);
 Route::post('transaction/post/{id}',[ TransactionController::class,'check_order'])->name('transaction.check_order');
