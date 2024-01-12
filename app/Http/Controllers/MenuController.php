@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\consultantInfo;
 use App\Models\isNumberUsed;
 use App\Models\transaction;
 use Carbon\Carbon;
@@ -14,7 +15,13 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('menu');
+        $consultant_info = consultantInfo::take(3)->get();
+        // foreach ($consultant_info as $c) {
+        //     $a[] = $c->user;
+        // }
+        // return $a;
+        // return $consultant_info;
+        return view('menu', compact('consultant_info'));
     }
 
     public function indexCurhat()
@@ -41,7 +48,7 @@ class MenuController extends Controller
     {
         return view('psikolog');
     }
-    
+
     public function indexChat()
     {
         return view('chatify');

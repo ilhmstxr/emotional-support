@@ -20,10 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('menu');
-});
-
+// Route::get('/', function () {
+//     return view('menu');
+// });
 
 Route::get('/maps', function () {
     return view('maps');
@@ -35,7 +34,7 @@ Route::get('/janjitemu',function ()  {
 });
 
 
-Route::get('/menu', [MenuController::class,'index'])->name('menu');
+Route::get('/', [MenuController::class,'index'])->name('menu');
 Route::get('/register', [AuthController::class,'indexRegister'])->name('registerpage');
 Route::get('/login', [AuthController::class,'indexLogin'])->name('loginpage');
 Route::get('/curhat', [MenuController::class, 'indexCurhat'])->name('curhat');
