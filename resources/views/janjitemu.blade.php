@@ -35,14 +35,22 @@
             <div class="container" style="background-color: #2D9CDB;">
                 <form action="{{ route('transaction.check_order') }}" method="POST">
                     @csrf
-                    <input type="hidden" value="{{ $id }}">
                     <div class="mb-3">
                         <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
                         <input type="text" class="form-control" id="yourLocation" value="">
                     </div>
 
                     <div class="mb-3">
-                        <input type="date" class="form-control" id="tanggalPick" placeholder="Pilih tanggal dan waktu">
+                        <div class="kiri">
+
+                            <input type="date" class="form-control" id="tanggalPick" placeholder="Pilih tanggal "
+                                min="{{ today()->format('Y-m-d') }}">
+                        </div>
+                        <div class="kanan">
+
+                            <input type="time" class="form-control" id="waktuPick" placeholder="Pilih waktu"
+                                min="{{ today()->format('H:i') }}">
+                        </div>
                     </div>
 
 
@@ -70,6 +78,25 @@
     <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+    <script>
+        // Set the value using JavaScript after the page has loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentDate = new Date(); // or get the date from your server or other sources
+            var formattedDate = currentDate.toISOString().slice(0, 10);
+
+            document.getElementById('tanggalPick').value = formattedDate;
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+
+            var formattedTime = hours + ":" + minutes;
+
+            document.getElementById('waktuPick').value = formattedTime;
+        });
+    </script>
 </body>
 
 </html>

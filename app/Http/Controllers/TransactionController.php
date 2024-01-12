@@ -9,6 +9,25 @@ class TransactionController extends Controller
 {
     public function check_order(){
         
+        $minRand  = 100000000000;
+        $maxRand  = 999999999999;
+
+        $check = false;
+        do {
+            $randomNumber = random_int($minRand, $maxRand);
+            $transaction_id_check = transaction::all();
+            foreach ($transaction_id_check as $transaction_id) {
+                if ($transaction_id->transaction_id == $randomNumber) {
+                    $check = true;
+                }
+            }
+            $check = false;
+        } while ($check);
+
+        $id = $randomNumber;
+
+
+        
     }
     /**
      * Display a listing of the resource.

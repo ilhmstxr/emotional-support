@@ -50,7 +50,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('transaction', TransactionController::class);
-Route::post('transaction/post/{id}',[ TransactionController::class,'check_order'])->name('transaction.check_order');
+Route::post('transaction/cek',[ TransactionController::class,'check_order'])->name('transaction.check_order');
 // Route::post('transaction/post/{id}',[ TransactionController::class,'check_order'])->name('transaction.check_order');
 
 // Route::resource('/menu', MenuController::class); 
