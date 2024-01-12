@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -38,5 +39,7 @@ Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonl
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
 
 
+Route::resource('transaction', TransactionController::class);
+Route::post('transaction/post/{id}',[ TransactionController::class,'check_order'])->name('transaction.check_order');
 
 // Route::resource('/menu', MenuController::class); 

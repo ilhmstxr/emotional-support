@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\transaction;
+use App\Models\queryOrder;
 use Illuminate\Http\Request;
 
-class TransactionController extends Controller
+class QueryOrderController extends Controller
 {
-    public function check_order(){
-        
-    }
     /**
      * Display a listing of the resource.
      */
@@ -37,7 +34,7 @@ class TransactionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(transaction $transaction)
+    public function show(queryOrder $queryOrder)
     {
         //
     }
@@ -45,7 +42,7 @@ class TransactionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(transaction $transaction)
+    public function edit(queryOrder $queryOrder)
     {
         //
     }
@@ -53,7 +50,7 @@ class TransactionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, transaction $transaction)
+    public function update(Request $request, queryOrder $queryOrder)
     {
         //
     }
@@ -61,7 +58,7 @@ class TransactionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(transaction $transaction)
+    public function destroy(queryOrder $queryOrder)
     {
         //
     }
