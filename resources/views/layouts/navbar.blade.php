@@ -65,10 +65,12 @@
                                     role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                     v-pre>
                                     {{ Auth::user()->name }}
-                                    @php
-                                        $consultant_info = App\Models\consultantInfo::where('consultant_id', auth()->user()->id)->first();
-                                    @endphp
-                                    {{ $consultant_info->degree }}
+                                    @if (auth()->role->role == 2)
+                                        @php
+                                            $consultant_info = App\Models\consultantInfo::where('consultant_id', auth()->user()->id)->first();
+                                        @endphp
+                                        {{ $consultant_info->degree }}
+                                    @endif
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
