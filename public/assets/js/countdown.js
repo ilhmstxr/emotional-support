@@ -1,3 +1,5 @@
+// const $ = require('jquery');
+
 /*global window module */
 /**
  * @license countdown.js v2.6.1 http://countdownjs.org
