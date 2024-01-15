@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         $psikolog_info = [
             [
                 'consultant_id' => 3,
-                'price' => 999000,
+                'price' => 888000,
                 'degree' => 'M. Psi, Psikolog',
                 'expert_in' => 'Psikologi Klinis',
                 'sessions' => 110,
@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'consultant_id' => 5,
-                'price' => 999000,
+                'price' => 777000,
                 'degree' => 'M. Psi, Psikolog',
                 'expert_in' => 'Psikologi Mental',
                 'sessions' => 40,
