@@ -9,13 +9,23 @@
 </head>
 
 <body>
-    <div id="countdown"> </div>
+    <h1>countdown</h1>
+    <div id="countdown">
+        <span class="hour"></span>
+        <span class="minute"></span>
+    </div>
     <script src="{{ asset('assets/js/countdown.js') }}"></script>
 
     <script>
-        
-        // console.log(timespan);
+        var time = countdown(new Date(2024, 00, 15, 20, 08));
+        // var minute = countdown(new Date(2024, 00, 15, 20)).toString();
+
+        $(document).ready(function() {
+            $('#hour').val() = time.minutes
+        })
+        console.log(hour);
     </script>
+
 </body>
 
 </html>

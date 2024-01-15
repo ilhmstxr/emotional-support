@@ -33,6 +33,7 @@
 
             </div>
             <div class="container" style="background-color: #2D9CDB;">
+                <div class="row">
                 <form action="{{ route('transaction.check_order') }}" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -60,7 +61,8 @@
                     </div>
                     <button class="wbutton-outline hpoppins" type="submit">Cari Psikolog</button>
                 </form>
-            </div>
+                </div>
+              </div>
         </div>
 
         <!-- MAPS -->

@@ -28,6 +28,8 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::MENU;
 
+    
+
     /**
      * Create a new controller instance.
      *

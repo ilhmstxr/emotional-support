@@ -20,14 +20,14 @@
     <div class="hpoppins">
         <nav class="navbar navbar-expand-lg bg-body-tertiary mb-2">
             <div class="container-fluid">
-                <a class="navbar-brand ms-2" href="/">
+                <a class="navbar-brand ms-2" href="/menu">
                     <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="40">
                 </a>
-                <a class="navbar-brand ms-2" style="color: #2D9CDB; font-weight:700" href="/">SHEA</a>
+                <a class="navbar-brand ms-2" style="color: #2D9CDB; font-weight:700" href="/menu">SHEA</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link me-5" aria-current="page" href="/"
+                            <a class="nav-link me-5" aria-current="page" href="/menu"
                                 style="color: #2D9CDB; font-weight:650;">Beranda</a>
                         </li>
                         <li class="nav-item me-5">
@@ -37,10 +37,10 @@
                             <a class="nav-link" href="/psikolog">Psikolog</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/forum">Forum</a>
+                            <a class="nav-link" href="/menu">Forum</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/topup">Top Up</a>
+                            <a class="nav-link" href="/menu">Hubungi Kami</a>
                         </li>
                     </ul>
                     <div class="button group p-auto">
@@ -65,7 +65,7 @@
                                     role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                     v-pre>
                                     {{ Auth::user()->name }}
-                                    @if (auth()->role->role == 2)
+                                    @if (auth()->user()->role->id == 2)
                                         @php
                                             $consultant_info = App\Models\consultantInfo::where('consultant_id', auth()->user()->id)->first();
                                         @endphp

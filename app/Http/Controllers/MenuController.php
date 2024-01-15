@@ -46,6 +46,7 @@ class MenuController extends Controller
 
     public function indexPsikolog()
     {
+
         return view('psikolog');
     }
 
