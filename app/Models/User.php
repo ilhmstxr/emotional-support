@@ -50,6 +50,6 @@ class User extends Authenticatable
 
     public function consultant_info()
     {
-        return $this->hasOne(consultantInfo::class);
+        return $this->hasOne(consultantInfo::class, 'consultant_id');
     }   
 }
