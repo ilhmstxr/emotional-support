@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\consultantInfo;
 use App\Models\transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\isNull;
@@ -16,6 +17,18 @@ class TransactionController extends Controller
         $price_check = consultantInfo::get();
 
         $minimum_price = consultantInfo::min('price');
+
+        Carbon::setLocale('id');
+
+        $time = $request->waktu;
+        $date = Carbon::now()->setTimezone('Asia/Jakarta');;
+        $currentTime = $date->format('H:i');
+
+        // return $currentTime;
+        // time is 13:05
+        if ($time < $currentTime) {
+            return redirect()->back()->with('denied', "tidak boleh kurang dari waktu");
+        }
 
         if (is_null($request->harga)) {
             return redirect()->back()->with('denied', 'minimal ga gratis');

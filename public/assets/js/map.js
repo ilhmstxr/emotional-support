@@ -67,7 +67,7 @@ const initMap = async () => {
 
                 // putting the address in location
                 document.getElementById("yourLocation").value = address;
-                console.log(address);
+                // console.log(address);
 
                 infoWindow.setContent(address);
                 infoWindow.open(map, marker);
