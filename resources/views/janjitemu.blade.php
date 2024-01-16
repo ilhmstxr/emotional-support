@@ -99,16 +99,21 @@
             var formattedDate = currentDate.toISOString().slice(0, 10);
 
             document.getElementById('tanggalPick').value = formattedDate;
-        });
 
-        document.addEventListener('DOMContentLoaded', function() {
             var currentTime = new Date();
             var hours = currentTime.getHours();
-            var minutes = currentTime.getMinutes();
+            let minutes = currentTime.getMinutes();
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
 
             var formattedTime = hours + ":" + minutes;
 
             document.getElementById('waktuPick').value = formattedTime;
+            // console.log(currentDate);
+            console.log(formattedTime);
+            // console.log(minutes);
         });
     </script>
 </body>
