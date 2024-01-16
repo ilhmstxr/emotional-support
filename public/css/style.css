@@ -131,6 +131,22 @@
     margin-bottom: 5px;
 }
 
+.figure-profile{
+    border-radius: 7px;
+    border-color: #000000;
+    border-width: 2px;
+    text-align: center;
+}
+
+.border-profile{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid #808080;
+    
+}
+
     /* View Mobile */
     /* View Mobile */
     /* View Mobile */

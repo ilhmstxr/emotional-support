@@ -40,6 +40,7 @@ Route::get('/curhat', [MenuController::class, 'indexCurhat'])->name('curhat');
 Route::get('/janjitemu', [MenuController::class, 'indexJT'])->name('janjitemu');
 Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonline');
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
+Route::get('/profilepsikolog', [MenuController::class, 'indexProfilePsikolog'])->name('profilepsikolog');
 
 Route::get('/countdown', function () {
     return view('/countdown');
