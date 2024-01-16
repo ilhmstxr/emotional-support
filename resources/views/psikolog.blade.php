@@ -12,12 +12,22 @@
 <body>
     @section('content')
 
-    <div class="homegutter">
-    <div class="container overflow-hidden">
 
-    <!-- PROFILE PSIKOLOG -->
-    <!-- PROFILE PSIKOLOG -->
-    <!-- PROFILE PSIKOLOG -->
+    <div class="container ">
+        <div class="row row-col-2 ">
+            <div class="col-md-4 border-profile">
+                <figure>
+                    <img src="{{'logoSHEA.png'}}" class="rounded-circle" width="130px"> 
+                    <figcaption class="pSora py-2" style="text-align: start; font-weight:bold;">Kim Bab, M. Psi, Psikolog</figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- <div class="homegutter">
+    <div class="container overflow-hidden">
 
   <div class="row gx-5 px-5 pb-4">
 
@@ -80,7 +90,7 @@
   </div>
 </div>
 
-</div>
+</div> -->
     
     @endsection
 </body>

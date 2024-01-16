@@ -50,6 +50,12 @@ class MenuController extends Controller
         return view('psikolog');
     }
 
+    public function indexProfilePsikolog()
+    {
+
+        return view('profilepsikolog');
+    }
+
     public function indexChat()
     {
         return view('chatify');
