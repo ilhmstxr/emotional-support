@@ -147,6 +147,22 @@
     
 }
 
+.border-hk{
+
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.underline{
+    border-bottom: 2px #2D9CDB;
+    display: inline-block;
+}
+
+.center{
+    text-align: center;
+}
     /* View Mobile */
     /* View Mobile */
     /* View Mobile */
