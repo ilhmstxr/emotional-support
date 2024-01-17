@@ -41,6 +41,7 @@ Route::get('/janjitemu', [MenuController::class, 'indexJT'])->name('janjitemu');
 Route::get('/curhatonline', [MenuController::class, 'indexCO'])->name('curhatonline');
 Route::get('/psikolog', [MenuController::class, 'indexPsikolog'])->name('psikolog');
 Route::get('/profilepsikolog', [MenuController::class, 'indexProfilePsikolog'])->name('profilepsikolog');
+Route::get('/hubungikami', [MenuController::class, 'indexHubungiKami'])->name('hubungikami');
 
 Route::get('/countdown', function () {
     return view('/countdown');

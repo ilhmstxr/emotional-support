@@ -34,7 +34,7 @@
                             <a class="nav-link" href="/menu">Forum</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/menu">Hubungi Kami</a>
+                            <a class="nav-link" href="/hubungikami">Hubungi Kami</a>
                         </li>
                     </ul>
                     <div class="button group p-auto">

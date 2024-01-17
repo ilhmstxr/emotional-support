@@ -29,6 +29,11 @@ class MenuController extends Controller
         return view('curhat');
     }
 
+    public function indexHubungiKami()
+    {
+        return view('hubungikami');
+    }
+
 
     public function indexJT()
     {
