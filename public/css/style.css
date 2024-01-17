@@ -163,6 +163,11 @@
 .center{
     text-align: center;
 }
+
+.create-content-forum{
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
     /* View Mobile */
     /* View Mobile */
     /* View Mobile */
