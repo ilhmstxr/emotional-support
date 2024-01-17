@@ -56,14 +56,18 @@ class MenuController extends Controller
 
     public function indexPsikolog()
     {
-
-        return view('psikolog');
+        $consultant = consultantInfo::all();
+        $compact = ['consultant'];
+        return view('psikolog', compact($compact));
     }
 
-    public function indexProfilePsikolog()
+    public function indexProfilePsikolog(Request $request)
     {
-
-        return view('profilepsikolog');
+        $id = $request->id;
+        $consultant = consultantInfo::find($id);
+        // return $consultant;
+        $compact = ['consultant'];
+        return view('profilepsikolog', compact($compact));
     }
 
     public function indexChat()
