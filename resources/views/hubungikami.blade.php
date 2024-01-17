@@ -16,16 +16,16 @@
 <body>
     @section('content')
     <div class="container p-5">
-        <div class="border-hk center">
+        <div class="border-hk center pb-5">
             <h3 class="hpoppins" style="color:#2D9CDB; border-bottom:2px solid #2D9CDB; margin-top:20px; padding-bottom: 3px; display:inline-block;">
                 Hubungi Kami
             </h3>
             <br>
             <h4 class="hpoppins ps-5 pt-2" style="float: inline-start;">Tinggalkan Pesan Untuk Kami</h4>
 
-            <p class="pt-3 pSora" style=""> Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
+            <!-- <p class="pt-3 pSora" style=""> Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
             <p class="pt-3 pSora" style=""> +6281356567878</p>
-            <p class="pt-3 pSora" style=""> SHEA@gmail.com</p>
+            <p class="pt-3 pSora" style=""> SHEA@gmail.com</p> -->
 
             <form action="" class="p-5" style="">
                 <label for="nama" class="pSora mb-2" style="color: #2D9CDB; text-align:start; float:inline-start;">Nama</label>

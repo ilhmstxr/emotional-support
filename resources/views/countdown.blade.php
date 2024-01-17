@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <h1>countdown</h1>
+    <h1>Countdown</h1>
     <div class="input">
-        <label for="">berapa sesi?</label>
+        <label for="">Berapa Sesi?</label>
         <form action="{{ route('transaction.store') }}" method="POST">
             @csrf
             <input type="hidden" value="online" name="tipe">
             <input type="number" value="1" id="value" name="value">
-            <button onclick="cekValue()" type="submit">sesi mbot</button>
+            <button onclick="cekValue()" type="submit">Sesi</button>
         </form>
     </div>
     <div id="countdown">

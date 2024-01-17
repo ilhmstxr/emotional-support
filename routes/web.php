@@ -33,6 +33,7 @@ Route::get('/janjitemu', function () {
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 Route::get('/', [MenuController::class, 'index'])->name('menu');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
+Route::get('/forum', [MenuController::class, 'indexForum'])->name('forum');
 Route::get('/register', [AuthController::class, 'indexRegister'])->name('registerpage');
 Route::get('/login', [AuthController::class, 'indexLogin'])->name('loginpage');
 Route::get('/curhat', [MenuController::class, 'indexCurhat'])->name('curhat');
