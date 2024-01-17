@@ -31,7 +31,7 @@
                             <a class="nav-link" href="/psikolog">Psikolog</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/menu">Forum</a>
+                            <a class="nav-link" href="/forum">Forum</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link" href="/hubungikami">Hubungi Kami</a>
@@ -118,8 +118,8 @@
 
                 <div class="social-media col-8 text-center ps-5">
                     <h6 class="hpoppins text-light">Social Media</h6>
-                    <a href="#">
-                        <img src="{{ '/img/logofb.png' }}" alt="ig" width="50px" class="p-2 pb-3 pt-4">
+                    <a href="https://www.instagram.com/azztqy_">
+                        <img src="{{ '/img/logofb.png' }}" alt="fb" width="50px" class="p-2 pb-3 pt-4" onclick="openLinkInNewTab()">
                     </a>
                     <br>
                     <a>
