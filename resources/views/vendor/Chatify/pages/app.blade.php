@@ -176,7 +176,7 @@
 
             // set currentDate
 
-            var time = countdown(new Date(2024, 00, 18, 21, 25, 59));
+            var time = countdown(new Date(2024, 00, 19 , 00, 00, 00));
 
                 
             if (time.hours < 10) {
