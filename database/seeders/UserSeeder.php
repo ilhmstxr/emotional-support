@@ -90,7 +90,9 @@ class UserSeeder extends Seeder
                 'sessions' => 600,
                 'helped' => 400,
                 'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
-Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati..",
+
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
+
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
             ],
@@ -102,8 +104,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Stress ',
                 'sessions' => 320,
                 'helped' => 150,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
 
@@ -117,8 +119,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Masalah Belajar',
                 'sessions' => 120,
                 'helped' => 100,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'offline'
 
@@ -132,8 +134,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Anxiety',
                 'sessions' => 400,
                 'helped' => 380,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
 
@@ -147,8 +149,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Konflik Interpersonal',
                 'sessions' => 340,
                 'helped' => 300,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'offline'
 
@@ -162,8 +164,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Anxiety',
                 'sessions' => 400,
                 'helped' => 370,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+                Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
 
@@ -177,8 +179,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Depresi',
                 'sessions' => 1000,
                 'helped' => 980,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'sibuk'
 
@@ -192,8 +194,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Trauma',
                 'sessions' => 650,
                 'helped' => 500,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'sibuk'
 
@@ -207,8 +209,8 @@ Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi te
                 'expert_in' => 'Penanganan Kedisiplinan',
                 'sessions' => 900,
                 'helped' => 800,
-                'bio' => "Saya adalah lulusan S2 Psikologi klinis tahun 2021 yang memiliki pengalaman menangani kasus pada klien anak-anak dan dewasa (praktek profesi di bawah supervisi Psikolog profesional secara online). Sejak menempuh masa studi S1 Psikologi, saya tertarik mendalami bidang minat psikologi klinis, khususnya tentang meningkatkan kesejahteraan manusia (well-being) dan penanganan kondisi emosi sedih yang mendalam (depresi).
-                Selama kita hidup, kita tidak pernah lepas dari masalah. Saya percaya bahwa manusia sebagai pribadi yang unik memiliki potensi untuk menyelesaikan permasalahan dalam hidupnya, hanya saja seringkali kita tidak menyadari potensi itu. Oleh karena itu, bantuan dari kami tenaga profesional lulusan Psikologi Klinis Profesi akan membantu secara objektif menganalisis permasalahan klien.",
+                'bio' => "Saya adalah S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
 

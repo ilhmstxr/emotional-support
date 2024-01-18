@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-@php
+{{-- @php
     App\Http\Controllers\TransactionController
-@endphp
+@endphp --}}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +28,8 @@
         <span class="second"></span>
         {{-- <span class="time"></span> --}}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{ asset('assets/js/countdown.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-3.7.1.js') }}"></script>
 
@@ -40,6 +43,10 @@
                 console.log(rent);
                 refreshContent(rent)
             }
+
+            // document.getElementById('#cek').addEventListener('clicl', function() {
+
+            // })
             // console.log(value);
         }
 
@@ -48,7 +55,7 @@
         function refreshContent(rent) {
 
             // get currentDate
-            {
+            
                 var time = new Date();
                 let year = time.getFullYear();
                 let month = time.getMonth() + 1;
@@ -64,12 +71,13 @@
                     minutes,
                     second
                 }
-                console.log(date);
-            }
+                // console.log(date);
+                // console.log(hours);
+            
 
             // set currentDate
-            {
-                var time = countdown(new Date(2024, 00, 15, 20, 48));
+            
+                var time = countdown(new Date(2024, 00, 18, 21, 15));
 
                 if (time.hours < 10) {
                     $('.hour').text("0" + time.hours)
@@ -88,7 +96,11 @@
                 } else {
                     $('.second').text(time.seconds)
                 }
-            }
+            
+            // console.log(hours);
+            // if (hours == 00 && minutes == 00 && second == 00) {
+               
+            // }
         }
     </script>
 
