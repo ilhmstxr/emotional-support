@@ -44,7 +44,7 @@ class MenuController extends Controller
     {
         // pending 
         $date = today()->format('d-m-Y');
-
+        
         $compact = ['date'];
         return view('janjitemu', compact($compact));
     }
@@ -57,7 +57,8 @@ class MenuController extends Controller
     public function indexPsikolog()
     {
         $consultant = consultantInfo::all();
-        $compact = ['consultant'];
+        $tipe = "kosong";
+        $compact = ['consultant','tipe'];
         return view('psikolog', compact($compact));
     }
 
