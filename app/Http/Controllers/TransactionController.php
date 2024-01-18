@@ -21,6 +21,8 @@ class TransactionController extends Controller
 
         Carbon::setLocale('id');
 
+        // return $request;
+        $tipe = $request->tipe;
         $time = $request->waktu;
         $harga = $request->harga;
         $date = Carbon::now()->setTimezone('Asia/Jakarta');;
@@ -38,8 +40,10 @@ class TransactionController extends Controller
             return redirect()->back()->with('denied', "harga terlalu murah naikan harga minimal $minimum_price");
         }
 
-        $consultant = consultantInfo::where('price', '>', $harga)->get();
-        $compact = ['consultant'];
+        $consultant = consultantInfo::where('price_meet', '>=', $harga)->get();
+        // return $consultant;
+        // $tipe = 
+        $compact = ['consultant', 'tipe'];
         return view('psikolog', compact($compact));
     }
     /**

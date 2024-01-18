@@ -33,8 +33,8 @@
 
 
         <div class="container">
-                <div class="row" style="margin-left:200px;">
-                     @foreach ($consultant as $c)
+            <div class="row" style="margin-left:200px;">
+                @foreach ($consultant as $c)
                     <div class="col-md-4 border-profile text-center">
                         <figure>
                             <img src="{{ 'img/logoSHEA.png' }}" class="rounded-circle" style="padding-top: 20px;"
@@ -46,44 +46,71 @@
                             <form action="{{ route('profilepsikolog', $c->user->id) }}">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $c->user->id }}">
+                                <p>harga janji temu{{ $c->price_meet }}</p>
+                                <p>harga online{{ $c->price_online }}</p>
                                 <button type="submit" class="btn btn-outline text-start pSora my-2"
                                     style="color : #2D9CDB; border-color : #2D9CDB; border-radius: 7px; float:inline-start">
                                     Profile Lengkap</button><br><br>
                             </form>
                         </figure>
                         <div class="button-group mx-auto">
-                            @if ($c->status == 'online')
-                                <form action="">
-                                    <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
-                                        style="background-color:#CBE11E; color : #FFFFFF; border-color : #CBE11E; border-radius: 7px; float:inline-start">
-                                        Curhat Online</button>
-                                </form>
-                                <form action="">
-                                    <button type="button" class="text-start hpoppins mx-auto mb-2 p-3"
-                                        style="background-color:#2D9CDB ;color : #FFFFFF; border-color : #2D9CDB; border-radius: 7px; float:inline-start">
-                                        Janji Temu</button>
-                                </form>
-                            @else
-                                @if ($c->status == 'offline')
-                                    <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
-                                        style="background-color:#FFAA4A; color : #FFFFFF; border-color : #FFAA4A; border-radius: 7px; float:inline-start"
-                                        disabled>
-                                        Sibuk</button>
+                            @if ($tipe == 'janji_temu')
+                                @if ($c->status == 'online')
+                                    <form action="">
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#CBE11E; color : #FFFFFF; border-color : #CBE11E; border-radius: 7px; float:inline-start">
+                                            Pesan</button>
+                                    </form>
+                                @elseif($c->status == 'offline')
+                                    <form action="">
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#EAEAEA; color : #FFFFFF; border-color : #EAEAEA; border-radius: 7px; float:inline-start"
+                                            disabled>
+                                            offline</button>
+                                    </form>
                                 @else
-                                    <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
-                                        style="background-color:#FF4500; color : #FFFFFF; border-color : #FF4500; border-radius: 7px; float:inline-start">
-                                        Offline</button>
+                                    <form action="">
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#FFAA4A; color : #FFFFFF; border-color : #FFAA4A; border-radius: 7px; float:inline-start"
+                                            disabled>
+                                            Sibuk</button>
+                                    </form>
                                 @endif
+                            @else
+                                @if ($c->status == 'online')
+                                    <form action="">
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#CBE11E; color : #FFFFFF; border-color : #CBE11E; border-radius: 7px; float:inline-start">
+                                            Curhat Online</button>
+                                    </form>
+                                    <form action="">
+                                        <button type="button" class="text-start hpoppins mx-auto mb-2 p-3"
+                                            style="background-color:#2D9CDB ;color : #FFFFFF; border-color : #2D9CDB; border-radius: 7px; float:inline-start">
+                                            Janji Temu</button>
+                                    </form>
+                                @else
+                                    @if ($c->status == 'offline')
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#FFAA4A; color : #FFFFFF; border-color : #FFAA4A; border-radius: 7px; float:inline-start"
+                                            disabled>
+                                            Sibuk</button>
+                                    @else
+                                        <button type="button" class="text-start hpoppins p-3 mb-2 mr-4"
+                                            style="background-color:#FF4500; color : #FFFFFF; border-color : #FF4500; border-radius: 7px; float:inline-start"
+                                            disabled>
+                                            Offline</button>
+                                    @endif
 
-                                <button type="button" class="text-start hpoppins mx-auto mb-2 p-3"
-                                    style="background-color:#EAEAEA ;color : #828282; border-color : #EAEAEA; border-radius: 7px; float:inline-start">
-                                    Janji Temu</button>
+                                    <button type="button" class="text-start hpoppins mx-auto mb-2 p-3"
+                                        style="background-color:#EAEAEA ;color : #828282; border-color : #EAEAEA; border-radius: 7px; float:inline-start">
+                                        Janji Temu</button>
+                                @endif
                             @endif
                         </div>
                     </div>
-                    @endforeach
-                </div>
-            
+                @endforeach
+            </div>
+
         </div>
 
 

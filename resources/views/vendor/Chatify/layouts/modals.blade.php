@@ -9,7 +9,7 @@
       <div class="app-modal-container">
           <div class="app-modal-card" data-name="delete" data-modal='0'>
               <div class="app-modal-header">Yakin Ingin Menghapus Pesan Ini?</div>
-              <div class="app-modal-body">Pesan Tidak Akan Bisa Dipulihkan!/div>
+              <div class="app-modal-body">Pesan Tidak Akan Bisa Dipulihkan!</div>
               <div class="app-modal-footer">
                   <a href="javascript:void(0)" class="app-btn cancel">Batalkan</a>
                   <a href="javascript:void(0)" class="app-btn a-btn-danger delete">Hapus</a>
