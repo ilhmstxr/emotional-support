@@ -11,37 +11,37 @@
 
 <body>
     @section('content')
-        @if ($message = Session::get('denied'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
-                <strong>{{ $message }}</strong>
-            </div>
-        @endif
-        @if ($message = Session::get('advice'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
-                <strong>{{ $message }}</strong>
-            </div>
-        @endif
+    @if ($message = Session::get('denied'))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+    @if ($message = Session::get('advice'))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
 
-        <div class="d-block p-5 text-center">
-            <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
-                Curhat Online
-            </a>
-            <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
-                Janji Temu
-            </a>
-        </div>
+    <div class="d-block p-5 text-center">
+        <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
+            Curhat Online
+        </a>
+        <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
+            Janji Temu
+        </a>
+    </div>
 
-        <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
-        </h2>
+    <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
+    </h2>
 
-        <!-- MAPS -->
-        <!-- MAPS -->
-        <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
 
-        <div class="mapsCanvas">
-            <div id="map">
+    <div class="mapsCanvas">
+        <div id="map">
 
             </div>
             <div class="container" style="background-color: #2D9CDB;">
@@ -53,18 +53,10 @@
                             <input type="text" class="form-control" id="lokasi" value="" name="lokasi">
                         </div>
 
-                        <div class="mb-3">
-                            <div class="kiri">
-
-                                <input type="date" class="form-control" id="tanggalPick" placeholder="Pilih tanggal "
-                                    min="{{ today()->format('Y-m-d') }}" name="tanggal">
-                            </div>
-                            <div class="kanan">
-
-                                <input type="time" class="form-control" id="waktuPick" placeholder="Pilih waktu"
-                                    min="{{ today()->format('H:i') }}" name="waktu">
-                            </div>
-                        </div>
+                    <div class="mb-3 mx-0" style="display: inline-flex;">
+                        <input class="pSora" style="width: 635px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="date"  id="tanggalPick" placeholder="Pilih tanggal " min="{{ today()->format('Y-m-d') }}" name="tanggal">
+                        <input class="pSora" style="width: 635px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="time"  id="waktuPick" placeholder="Pilih waktu" min="{{ today()->format('H:i') }}" name="waktu">
+                    </div>
 
 
                         <div class="mb-3">
@@ -78,18 +70,16 @@
             </div>
         </div>
 
-        <!-- MAPS -->
-        <!-- MAPS -->
-        <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
 
 
 
     @endsection
 
     <script src="{{ asset('assets/js/map.js') }}"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly"
-        defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly" defer></script>
     <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
