@@ -50,7 +50,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
-                            <input type="text" class="form-control" id="yourLocation" value="" name="lokasi">
+                            <input type="text" class="form-control" id="lokasi" value="" name="lokasi">
                         </div>
 
                         <div class="mb-3">
@@ -71,7 +71,8 @@
                             <input type="number" class="form-control" id="hargaWant"
                                 placeholder="Masukan Harga yang anda inginkan" name="harga">
                         </div>
-                        <button class="wbutton-outline hpoppins" type="submit">Cari Psikolog</button>
+                        <button class="wbutton-outline hpoppins" type="submit" onclick="validateForm()">Cari
+                            Psikolog</button>
                     </form>
                 </div>
             </div>
@@ -91,8 +92,58 @@
         defer></script>
     <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        function validateForm() {
+
+            let lokasi = document.getElementById("lokasi").value;
+            let tanggalPick = document.getElementById("tanggalPick").value;
+            let waktuPick = document.getElementById("waktuPick").value;
+            let hargaWant = document.getElementById("hargaWant").value;
+
+            if (lokasi.trim() === "") {
+                // console.log("lokasi harus diisi");
+                Swal.fire({
+                    title: 'Error',
+                    text: 'lokasi harus diisi',
+                    icon: 'error',
+                    confirmButtonText: 'kembali ke transaksi'
+                })
+                event.preventDefault();
+            }
+            if (tanggalPick.trim() === "") {
+                // console.log("tanggal harus diisi");
+                Swal.fire({
+                    title: 'Error',
+                    text: 'tanggal harus diisi',
+                    icon: 'error',
+                    confirmButtonText: 'kembali ke transaksi'
+                })
+                event.preventDefault();
+            }
+            if (waktuPick.trim() === "") {
+                // console.log("waktu harus diisi ");
+                Swal.fire({
+                    title: 'Error',
+                    text: 'waktu harus diisi',
+                    icon: 'error',
+                    confirmButtonText: 'kembali ke transaksi'
+                })
+                event.preventDefault();
+            }
+            if (hargaWant.trim() === "") {
+                // console.log("harga harus diisi ");
+                Swal.fire({
+                    title: 'Error',
+                    text: 'harga harus diisi',
+                    icon: 'error',
+                    confirmButtonText: 'kembali ke transaksi'
+                })
+                event.preventDefault();
+            }
+        }
+
         // Set the value using JavaScript after the page has loaded
         document.addEventListener('DOMContentLoaded', function() {
             var currentDate = new Date(); // or get the date from your server or other sources
@@ -112,7 +163,7 @@
 
             document.getElementById('waktuPick').value = formattedTime;
             // console.log(currentDate);
-            console.log(formattedTime);
+            // console.log(formattedTime);
             // console.log(minutes);
         });
     </script>
