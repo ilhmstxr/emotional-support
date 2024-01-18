@@ -18,28 +18,28 @@
 <body>
     @section('content')
 
-        <div class="d-block p-5 text-center">
-            <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
-                Curhat Online
-            </a>
-            <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
-                Janji Temu
-            </a>
+    <div class="d-block p-5 text-center">
+        <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
+            Curhat Online
+        </a>
+        <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
+            Janji Temu
+        </a>
+    </div>
+
+    <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
+    </h2>
+
+    <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
+
+    <div class="mapsCanvas">
+        <div id="map">
+
         </div>
-
-        <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
-        </h2>
-
-        <!-- MAPS -->
-        <!-- MAPS -->
-        <!-- MAPS -->
-
-        <div class="mapsCanvas">
-            <div id="map">
-
-            </div>
-            <div class="container" style="background-color: #2D9CDB;">
-                {{-- <div class="row"> --}}
+        <div class="container" style="background-color: #2D9CDB;">
+            <div class="row">
                 <form action="{{ route('transaction.check_order') }}" method="POST">
                     @csrf
                     <input type="hidden" name="tipe" value="janji_temu">
@@ -49,60 +49,159 @@
                         <input type="text" class="form-control" id="lokasi" value="" name="lokasi">
                     </div>
 
-                    <div class="mb-3" {{-- style="display: inline-flex;" --}}>
-                        <div class="row">
-
-                            <div class="col">
-                                <input class="pSora form-control" {{-- style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" --}} type="date" id="tanggalPick"
-                                    placeholder="Pilih tanggal " min="{{ today()->format('Y-m-d') }}" name="tanggal">
-
-                            </div>
-                            <div class="col">
-
-                                <input class="pSora form-control" {{-- style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" --}} type="time" id="waktuPick"
-                                    placeholder="Pilih waktu" min="{{ today()->addMinutes(4)->format('H:i') }}"
-                                    name="waktu">
-                            </div>
-                        </div>
+                    <div class="mb-3 mx-0" style="display: inline-flex;">
+                        <input class="pSora" style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="date" id="tanggalPick" placeholder="Pilih tanggal " min="{{ today()->format('Y-m-d') }}" name="tanggal">
+                        <input class="pSora" style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="time" id="waktuPick" placeholder="Pilih waktu" min="{{ today()->format('H:i') }}" name="waktu">
                     </div>
 
 
                     <div class="mb-3">
-                        <input type="number" class="form-control" id="hargaWant"
-                            placeholder="Masukan Harga yang anda inginkan" name="harga">
+                        <input type="number" class="form-control" id="hargaWant" placeholder="Masukan Harga yang anda inginkan" name="harga">
                     </div>
-                    <button class="wbutton-outline hpoppins" type="submit" onclick="validateForm()">Cari
+                    <button class="wbutton-outline hpoppins mb-3" type="submit" onclick="validateForm()">Cari
                         Psikolog</button>
                 </form>
-                {{-- </div> --}}
+            </div>
+        </div>
+    </div>
+
+    <!-- MAPS -->
+    <!-- MAPS -->
+    <!-- MAPS -->
+
+    <div class="row mt-4">
+
+        <div class="col-6">
+            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
+                <div style="display: inline-flex;">
+                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
+                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
+                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
+                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
+                </div>
+
+                <div class="ps-4" style="">
+                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
+                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
+                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
+                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
+
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- MAPS -->
-        <!-- MAPS -->
-        <!-- MAPS -->
+        <div class="col-6">
+            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
+                <div style="display: inline-flex;">
+                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
+                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
+                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
+                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
+                </div>
+
+                <div class="ps-4" style="">
+                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
+                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
+                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
+                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row mt-4">
+
+        <div class="col-6">
+            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
+                <div style="display: inline-flex;">
+                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
+                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
+                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
+                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
+                </div>
+
+                <div class="ps-4" style="">
+                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
+                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
+                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
+                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
+                <div style="display: inline-flex;">
+                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
+                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
+                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
+                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
+                </div>
+
+                <div class="ps-4" style="">
+                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
+                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
+                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <img src="{{'img/star.png'}}" width="20px">
+                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
+                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
-    @endsection
+
+
+
 
     <script src="{{ asset('assets/js/map.js') }}"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly"
-        defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly" defer></script>
     <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        
-        @if ($message = Session::get('denied'))
-            Swal.fire({
-                title: 'Error',
-                text: '{{ $message }}',
-                icon: 'error',
-                confirmButtonText: 'kembali ke transaksi'
-            })
+        @if($message = Session::get('denied'))
+        Swal.fire({
+            title: 'Error',
+            text: '{{ $message }}',
+            icon: 'error',
+            confirmButtonText: 'kembali ke transaksi'
+        })
         @endif
 
 
@@ -181,6 +280,7 @@
             // console.log(minutes);
         });
     </script>
+    @endsection
 </body>
 
 </html>

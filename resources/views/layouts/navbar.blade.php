@@ -84,65 +84,68 @@
         @yield('content')
     </div>
 
-    <div class="bgfooter-text pb-2 pt-5 ps-5 mt-2 ">
-        <div class="row">
-            <div class="col-5">
-                <a href="/menu" class="no-underline">
-                    <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
-                </a>
-                <p class="pSora text-light pe-3">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa
-                    Timur 60294</p>
+    <footer style="bottom: 0;">
+        <div class="bgfooter-text pb-2 pt-5 ps-5 mt-2">
+            <div class="row">
+                <div class="col-5">
+                    <a href="/menu" class="no-underline">
+                        <h6 class="hpoppins" style="color: #FFFFFF;">SHEA</h6>
+                    </a>
+                    <p class="pSora text-light pe-3">Jl. Rungkut Madya No. 1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa
+                        Timur 60294</p>
+                </div>
+
+                <div class="col-6 footer-grid px-5">
+                    <div class="link-terkait">
+                        <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
+                        <ul class="list-group list-group-flush bg-transparent text-start">
+                            <li class="list-group-item">
+                                <a class="pSora no-underline" href="/menu" style="color: #FFFFFF;">Beranda</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <a class="pSora no-underline" href="/curhat" style="color: #FFFFFF;">Curhat</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <a class="pSora no-underline" href="/forum" style="color: #FFFFFF;">Forum</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <a class="pSora no-underline" href="/topup" style="color: #FFFFFF;">Top Up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="social-media col-8 text-center ps-5">
+                        <h6 class="hpoppins text-light">Social Media</h6>
+                        <a href="https://www.instagram.com/azztqy_">
+                            <img src="{{ '/img/logofb.png' }}" alt="fb" width="50px" class="p-2 pb-3 pt-4" onclick="openLinkInNewTab()">
+                        </a>
+                        <br>
+                        <a>
+                            <img src="{{ '/img/logoig.png' }}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()">
+                            <script>
+                                function openLinkInNewTab() {
+                                    var linkToOpen = 'https://www.instagram.com/azztqy_';
+                                    window.open(linkToOpen, '_blank');
+                                }
+                            </script>
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="130">
+                    </div>
+
+
+                </div>
             </div>
 
-            <div class="col-6 footer-grid px-5">
-                <div class="link-terkait">
-                    <h6 class="hpoppins" style="color: #FFFFFF;">Link Terkait</h6>
-                    <ul class="list-group list-group-flush bg-transparent text-start">
-                        <li class="list-group-item">
-                            <a class="pSora no-underline" href="/menu" style="color: #FFFFFF;">Beranda</a>
-                        </li>
+            <div class="line pt-2"></div>
 
-                        <li class="list-group-item">
-                            <a class="pSora no-underline" href="/curhat" style="color: #FFFFFF;">Curhat</a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a class="pSora no-underline" href="/forum" style="color: #FFFFFF;">Forum</a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a class="pSora no-underline" href="/topup" style="color: #FFFFFF;">Top Up</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="social-media col-8 text-center ps-5">
-                    <h6 class="hpoppins text-light">Social Media</h6>
-                    <a href="https://www.instagram.com/azztqy_">
-                        <img src="{{ '/img/logofb.png' }}" alt="fb" width="50px" class="p-2 pb-3 pt-4" onclick="openLinkInNewTab()">
-                    </a>
-                    <br>
-                    <a>
-                        <img src="{{ '/img/logoig.png' }}" alt="ig" width="50px" class="p-2" onclick="openLinkInNewTab()">
-                        <script>
-                            function openLinkInNewTab() {
-                                var linkToOpen = 'https://www.instagram.com/azztqy_';
-                                window.open(linkToOpen, '_blank');
-                            }
-                        </script>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <img src="{{ url('/img/logoSHEA.png') }}" alt="LOGOSHEA" width="130">
-                </div>
-
-
+            <div class="container pSora text-center text-light">
+                <p>Copyright © SHEA 2024</p>
             </div>
-        </div>
 
-        <div class="line pt-2"></div>
-
-        <div class="container pSora text-center text-light">
-            <p>Copyright © SHEA 2024</p>
-        </div>
+    </footer>

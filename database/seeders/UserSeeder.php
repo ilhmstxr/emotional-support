@@ -29,55 +29,55 @@ class UserSeeder extends Seeder
                 'name' => 'Kim Bab',
                 'email' => 'kimBau@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'Ram Yeon',
                 'email' => 'tabrakyeon@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'Bul Dak',
                 'email' => 'bulgembul@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'Bab i',
                 'email' => 'bab@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'steven acumalaka',
                 'email' => 'steve@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'putra kolot',
                 'email' => 'puttt@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'taqiya sipul',
                 'email' => 'taqoq@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'ilham ganteng',
                 'email' => 'ilhmz@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
             [
                 'name' => 'gataudweh',
                 'email' => 'gtw@gmail.com',
                 'role_id' => '2',
-                'password' => Bcrypt('shittyA$$')
+                'password' => Bcrypt('12345678')
             ],
         ];
         $psikolog_info = [
