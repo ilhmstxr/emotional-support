@@ -90,7 +90,9 @@ class UserSeeder extends Seeder
                 'sessions' => 600,
                 'helped' => 400,
                 'bio' => "Saya adalah Mahasiswa S1 Psikologi di Universitas Hogwards Semester 5 yang Memiliki Minat dengan dunia psikologi. Sebagai mahasiswa semester 5 di jurusan psikologi, saya telah mengikuti berbagai mata kuliah yang berkaitan dengan psikologi klinis, psikologi pendidikan, dan psikologi industri.
+
 Beberapa keterampilan yang saya miliki melibatkan penggunaan dan interpretasi tes psikologi seperti MBTI, tes kecerdasan, dan tes kepribadian. Saya juga memiliki keterampilan komunikasi yang baik, baik secara lisan maupun tulisan, serta keterampilan observasi untuk memahami perilaku dan pola pikir individu. Saya juga memiliki dasar pengetahuan dalam keterampilan konseling dan empati.",
+
                 'case' => "Pengasuhan dan perkembangan anak hingga remaja, pengelolaan stres, depresi, masalah relasional (attachment), pengelolaan rasa marah, trauma.",
                 'status' => 'online'
             ],
