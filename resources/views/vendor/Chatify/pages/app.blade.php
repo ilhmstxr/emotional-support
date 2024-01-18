@@ -10,7 +10,7 @@
                     <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">Pesan</span> </a>
                     {{-- header buttons --}}
                     <nav class="m-header-right">
-                        <a href="#"><i class="fas fa-cog settings-btn"></i></a>
+                        {{-- <a href="#"><i class="fas fa-cog settings-btn"></i></a> --}}
                         <a href="#" class="listView-x"><i class="fas fa-times"></i></a>
                     </nav>
                 </nav>
@@ -57,7 +57,7 @@
                 <nav class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
                     {{-- header back button, avatar and user name --}}
                     <div class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
-                        <a href="#" class="show-listView"><i class="fas fa-arrow-left"></i></a>
+                        {{-- <a href="#" class="show-listView"><i class="fas fa-arrow-left"></i></a> --}}
                         <div class="avatar av-s header-avatar"
                             style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;">
                         </div>
@@ -72,7 +72,6 @@
                                 <div class="col" id="hour"></div>
                                 <div class="col" id="minute"></div>
                                 <div class="col" id="second"></div>
-                                <button type="button" id="cek" onclick="cek()">cek</button>
 
                                 <!-- Countdown -->
 
@@ -81,9 +80,9 @@
                     </div>
                     {{-- header buttons --}}
                     <nav class="m-header-right">
-                        <a href="#" class="add-to-favorite"><i class="fas fa-star"></i></a>
+                        {{-- <a href="#" class="add-to-favorite"><i class="fas fa-star"></i></a>
                         <a href="/"><i class="fas fa-home"></i></a>
-                        <a href="#" class="show-infoSide"><i class="fas fa-info-circle"></i></a>
+                        <a href="#" class="show-infoSide"><i class="fas fa-info-circle"></i></a> --}}
                     </nav>
                 </nav>
                 {{-- Internet connection --}}
@@ -138,7 +137,11 @@
                 text: 'Sesi telah berakhir',
                 icon: 'success',
                 confirmButtonText: 'kembali ke dashboard'
-            })
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/menu"
+                } else {}
+            });
         }
 
 
@@ -210,13 +213,16 @@
             let second = time.seconds;
 
             if (hour == 0 & minute == 0 & second == 0) {
-                // console.log("done");
                 Swal.fire({
-                    title: 'Error!',
-                    text: 'Do you want to continue',
-                    icon: 'error',
+                    title: 'Waktu Habis',
+                    text: 'Sesi telah berakhir',
+                    icon: 'success',
                     confirmButtonText: 'kembali ke dashboard'
-                })
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "/menu"
+                    } else {}
+                });
             }
             // console.log("h" + time.hours);
             // console.log("m" + time.minutes);
