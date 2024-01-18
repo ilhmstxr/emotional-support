@@ -19,6 +19,7 @@ return new class extends Migration
             // $table->string('month');
             // $table->string('date');
             $table->dateTime('rent_at');
+            $table->dateTime('end_at');
             $table->string('type');
             $table->integer('price');
             $table->timestamps();

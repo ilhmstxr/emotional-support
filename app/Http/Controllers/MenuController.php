@@ -45,13 +45,25 @@ class MenuController extends Controller
         // pending 
         $date = today()->format('d-m-Y');
 
-        $compact = ['date'];
+        $view_consultant = 0;
+        $compact = ['date', 'view_consultant'];
         return view('janjitemu', compact($compact));
     }
 
     public function indexCO()
     {
         $consultant = consultantInfo::all();
+        foreach ($consultant as $c) {
+            $helped = $c->helped;
+            $session = $c->sessions;
+
+            // if the consultant have 0 session
+            $ratio = ($session > 0) ? $helped / $session : 0;
+
+            $rating = round($ratio * 5, 1);
+            $c->rating = $rating;
+        }
+        // return $consultant;
         $compact = ['consultant'];
         return view('curhatonline', compact($compact));
     }

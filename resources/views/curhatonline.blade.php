@@ -63,7 +63,7 @@
                                     <img src="{{ 'img/star.png' }}" width="20px">
                                     <img src="{{ 'img/star.png' }}" width="20px">
                                     <img src="{{ 'img/star.png' }}" width="20px">
-                                    <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">4.6
+                                    <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey;">{{ $c->rating }}
                                         ({{ $c->sessions }})
                                     </p>
                                     <h4 class="pSora" style="font-weight: bold;">Rp

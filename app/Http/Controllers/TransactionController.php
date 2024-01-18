@@ -13,20 +13,21 @@ class TransactionController extends Controller
 {
     public function check_order(Request $request)
     {
-        // return $request;
+        // return $request->view_consultant;
+
+
         $price_check = consultantInfo::get();
 
         $minimum_price = consultantInfo::min('price_meet');
-        // return $request;
 
         Carbon::setLocale('id');
 
         // return $request;
+        // return $view_consultant;
         $tipe = $request->tipe;
         $time = $request->waktu;
         $date = $request->tanggal;
         $harga = $request->harga;
-        $fetch = [$tipe, $time, $date, $harga];
         // return $fetch;
         $now = Carbon::now()->setTimezone('Asia/Jakarta');;
         $currentTime = $now->format('H:i');
@@ -44,10 +45,24 @@ class TransactionController extends Controller
         }
 
         $consultant = consultantInfo::where('price_meet', '>=', $harga)->get();
-        // return $consultant;
-        // $tipe = 
-        $compact = ['consultant', 'tipe', 'fetch'];
-        return view('psikolog', compact($compact));
+        foreach ($consultant as $c) {
+            $helped = $c->helped;
+            $session = $c->sessions;
+
+            // if the consultant have 0 session
+            $ratio = ($session > 0) ? $helped / $session : 0;
+
+            $rating = round($ratio * 5, 1);
+            $c->rating = $rating;
+        }
+
+        // $view_consultant = $view_consultant + 1;
+        $view_consultant = $request->view_consultant + 1;
+        $compact = ['consultant', 'tipe', 'time', 'date', 'harga', 'view_consultant'];
+        // return $view_consultant;
+        // return $compact;
+        return view('janjitemu')->with(compact($compact))->with('approved', 'Berhasil menemukan beberapa konsultan');
+        // return view('psikolog', compact($compact));
     }
     /**
      * Display a listing of the resource.
@@ -70,6 +85,29 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
+
+        $date = $request->date;
+        $time = $request->time;
+        // return $time;
+        // return $date;
+
+        if (preg_match('/^\d{2}:\d{2}$/', $time)) {
+            $time .= ':00';
+        } else {
+            $time = '00:00:00';
+        }
+
+        $carbonTime = Carbon::createFromFormat('H:i:s', $time);
+        $modifiedTime = $carbonTime->format('H:i:s');
+
+        list($year, $month, $day) = explode('-', $date);
+        list($hour, $minute, $second) = explode(':', $modifiedTime);
+        $endHour = $hour + 1;
+        $endDate = $year . "-" . $month . "-" . $day;
+        $endTime = $endHour . "-" . $minute . "-" . $second;
+
+        $tipe = $request->tipe;
+
         $minRand  = 100000000000;
         $maxRand  = 999999999999;
 
@@ -91,18 +129,25 @@ class TransactionController extends Controller
         $sesi = $request->value;
         $harga = $request->harga;
 
-        $insert_transatcion = [
+        $insert_transaction = [
             // 'transaction_id' => $this->check_order(),
             'type' => $tipe,
             // 'transaction_id' => $sesi,
-            'customers_id' => 1,
-            'consultant_id' => 2,
-            'price' => 40000,
+            'customers_id' => auth()->user()->id,
+            'consultant_id' => $request->consultant_id,
+            'price' => $request->price,
+            'rent_at' => $date . ' ' . $time,
+            'end_at' => $endDate . ' ' . $endTime,
         ];
 
-        transaction::create($insert_transatcion);
+        transaction::create($insert_transaction);
+        consultantInfo::where('id', $request->consultant_id)->update(['status' => 'sibuk']);
 
-        return redirect()->back();
+
+        $month = $month - 1;
+        $compact = ['id', 'tipe', 'sesi', 'harga', 'year', 'month', 'day', 'endHour', 'minute', 'second'];
+        return redirect()->route('chatify')->with(compact($compact));
+        // return redirect()->back();
     }
 
     /**

@@ -18,268 +18,250 @@
 <body>
     @section('content')
 
-    <div class="d-block p-5 text-center">
-        <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
-            Curhat Online
-        </a>
-        <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
-            Janji Temu
-        </a>
-    </div>
-
-    <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
-    </h2>
-
-    <!-- MAPS -->
-    <!-- MAPS -->
-    <!-- MAPS -->
-
-    <div class="mapsCanvas">
-        <div id="map">
-
+        <div class="d-block p-5 text-center">
+            <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
+                Curhat Online
+            </a>
+            <a href="/janjitemu" class="btn  hpoppins " style="background-color:#2D9CDB; color:#FFFFFF;" role="button">
+                Janji Temu
+            </a>
         </div>
-        <div class="container" style="background-color: #2D9CDB;">
-            <div class="row">
-                <form action="{{ route('transaction.check_order') }}" method="POST">
-                    @csrf
-                    <input type="hidden" name="tipe" value="janji_temu">
 
-                    <div class="mb-3">
-                        <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
-                        <input type="text" class="form-control" id="lokasi" value="" name="lokasi">
-                    </div>
+        <h2 class="hpoppins text-center p-3" style="color: #2D9CDB;">Buat Janji Untuk Curhat Dengan Mitra Kami Di Sekitarmu
+        </h2>
 
-                    <div class="mb-3 mx-0" style="display: inline-flex;">
-                        <input class="pSora" style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="date" id="tanggalPick" placeholder="Pilih tanggal " min="{{ today()->format('Y-m-d') }}" name="tanggal">
-                        <input class="pSora" style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;" type="time" id="waktuPick" placeholder="Pilih waktu" min="{{ today()->format('H:i') }}" name="waktu">
-                    </div>
+        <!-- MAPS -->
+        <!-- MAPS -->
+        <!-- MAPS -->
 
+        <div class="mapsCanvas">
+            <div id="map">
 
-                    <div class="mb-3">
-                        <input type="number" class="form-control" id="hargaWant" placeholder="Masukan Harga yang anda inginkan" name="harga">
-                    </div>
-                    <button class="wbutton-outline hpoppins mb-3" type="submit" onclick="validateForm()">Cari
-                        Psikolog</button>
-                </form>
             </div>
-        </div>
-    </div>
+            <div class="container" style="background-color: #2D9CDB;">
+                <div class="row">
+                    <form action="{{ route('transaction.check_order') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="tipe" value="janji_temu">
+                        {{-- <input type="hidden" id="view_consultant" value="{{ $view_consultant }}"> --}}
+                        {{-- <input type="hidden" name="view_consultant" value="{{ $view_consultant }}"> --}}
+                        <div class="mb-3">
+                            <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
+                            <input type="text" class="form-control" id="lokasi" value="" name="lokasi">
+                        </div>
 
-    <!-- MAPS -->
-    <!-- MAPS -->
-    <!-- MAPS -->
+                        <div class="mb-3 mx-0" style="display: inline-flex;">
+                            <input class="pSora"
+                                style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
+                                type="date" id="tanggalPick" placeholder="Pilih tanggal "
+                                min="{{ today()->format('Y-m-d') }}" name="tanggal">
+                            <input class="pSora"
+                                style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
+                                type="time" id="waktuPick" placeholder="Pilih waktu" min="{{ today()->format('H:i') }}"
+                                name="waktu">
+                        </div>
 
-    <div class="row mt-4">
 
-        <div class="col-6">
-            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
-                <div style="display: inline-flex;">
-                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
-                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
-                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
-                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
-                </div>
-
-                <div class="ps-4" style="">
-                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
-                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
-                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
-                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
-
-                    </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="hargaWant"
+                                placeholder="Masukan Harga yang anda inginkan" name="harga"
+                                @if ($view_consultant == 1) value="{{ $harga }}" @endif>
+                        </div>
+                        <button class="wbutton-outline hpoppins mb-3" type="submit" onclick="validateForm()">Cari
+                            Psikolog</button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="col-6">
-            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
-                <div style="display: inline-flex;">
-                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
-                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
-                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
-                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
-                </div>
+        <!-- MAPS -->
+        <!-- MAPS -->
+        <!-- MAPS -->
 
-                <div class="ps-4" style="">
-                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
-                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
-                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
-                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
+        @if ($view_consultant == 0)
+        @else
+            <div class="row mt-4">
+                @foreach ($consultant as $c)
+                    <div class="col-6">
+                        <div
+                            style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
+                            <div style="display: inline-flex;">
+                                <img src="{{ '/img/profile.png' }}" alt="profile" width="150px;"
+                                    style="padding-left: 10px;">
+                                <form action="{{ route('profilepsikolog', $c->user->id) }}">
+                                    @csrf
+                                    <button type="submit" class="wbutton-outline hpoppins"
+                                        style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat
+                                        Profile</button>
 
+                                </form>
+                                @if ($c->status == 'online')
+                                    <form action="{{ route('transaction.store') }}" method="POST">
+                                        @csrf
+                                        {{-- <h1>{{ $c->id }}</h1> --}}
+                                        <input type="hidden" name="tipe" value="{{ $tipe }}">
+                                        <input type="hidden" name="date" value="{{ $date }}">
+                                        <input type="hidden" name="time" value="{{ $time }}">
+                                        <input type="hidden" name="price" value="{{ $c->price_meet }}">
+                                        <input type="hidden" name="consultant_id" value="{{ $c->id }}">
+                                        {{-- <input type="hidden" name="status" value="sibuk"> --}}
+                                        <button type="submit" class="bbutton-outline hpoppins"
+                                            style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat
+                                            Janji</button>
+                                    </form>
+                                @else
+                                    <button type="submit" class="busybutton-outline hpoppins"
+                                        style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;"disabled>Sibuk</button>
+                                @endif
+                                <p class="pSora"
+                                    style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp
+                                    {{ number_format(intval($c->price_meet), 0, ',', '.') }}</p>
+                            </div>
+
+                            <div class="ps-4" style="">
+                                <p class="pSora"
+                                    style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">
+                                    {{ $c->user->name }}</p>
+                                <p class="pSora"
+                                    style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">
+                                    {{ $c->expert_in }}</p>
+                                <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
+                                    <img src="{{ '/img/star.png' }}" width="20px">
+                                    <img src="{{ '/img/star.png' }}" width="20px">
+                                    <img src="{{ '/img/star.png' }}" width="20px">
+                                    <img src="{{ '/img/star.png' }}" width="20px">
+                                    <img src="{{ '/img/star.png' }}" width="20px">
+                                    <p class="pSora"
+                                        style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">
+                                        Jarak Dari Anda : 6 km</p>
+                                    <p class="pt-1 pSora"
+                                        style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">
+                                        {{ $c->rating }}
+                                        ({{ $c->sessions }})
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="row mt-4">
-
-        <div class="col-6">
-            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
-                <div style="display: inline-flex;">
-                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
-                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
-                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
-                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
-                </div>
-
-                <div class="ps-4" style="">
-                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
-                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
-                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
-                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-6">
-            <div style="border-radius: 7px; width:625px; padding:10px; border: 1px solid #000000; overflow:hidden;">
-                <div style="display: inline-flex;">
-                    <img src="{{'img/profile.png'}}" alt="profile" width="150px;" style="padding-left: 10px;">
-                    <button class="wbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px; padding-left:40px; padding-right:40px;">Lihat Profile</button>
-                    <button class="bbutton-outline hpoppins" style="margin-top:50px; height:fit-content; margin-right:0px;  padding-left:40px; padding-right:40px;">Buat Janji</button>
-                    <p class="pSora" style="float:inline-end; font-weight:bold; padding:5px; margin-bottom:0px;">Rp 50.000</p>
-                </div>
-
-                <div class="ps-4" style="">
-                    <p class="pSora" style="font-weight: 900; padding-top:15px; padding-left:10px; margin-bottom:0px; font-size: larger; width:fit-content;">Kim Bab</p>
-                    <p class="pSora" style="font-weight: 400; padding-top:0px; padding-left:10px; color:#828282; margin-bottom:0px; width:fit-content;">Psikolog Klinis</p>
-                    <div class="" style="padding-left:10px; margin-top:0px; margin-bottom:0px;">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <img src="{{'img/star.png'}}" width="20px">
-                        <p class="pSora" style="font-weight: lighter; color:black; margin-top:0px; margin-bottom:0px; margin-right:25px; float:right;">Jarak Dari Anda : 6 km</p>
-                        <p class="pt-1 pSora" style="font-weight: lighter; color:darkgrey; margin-bottom:1px; width:fit-content;">4.6 (100)</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+                @endforeach
 
 
 
-
-
-
-
-    <script src="{{ asset('assets/js/map.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly" defer></script>
-    <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-        @if($message = Session::get('denied'))
-        Swal.fire({
-            title: 'Error',
-            text: '{{ $message }}',
-            icon: 'error',
-            confirmButtonText: 'kembali ke transaksi'
-        })
         @endif
 
 
-        function validateForm() {
+        <script src="{{ asset('assets/js/map.js') }}"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GbCxzGo3Db3nQrvUL8B0o9L2GcHZpBI&callback=initMap&v=weekly"
+            defer></script>
+        <link rel="stylesheet" href="{{ asset('assets/css/map.css') }}">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            let lokasi = document.getElementById("lokasi").value;
-            let tanggalPick = document.getElementById("tanggalPick").value;
-            let waktuPick = document.getElementById("waktuPick").value;
-            let hargaWant = document.getElementById("hargaWant").value;
-
-            if (lokasi.trim() === "") {
-                // console.log("lokasi harus diisi");
+        <script>
+            @if ($message = Session::get('denied'))
                 Swal.fire({
                     title: 'Error',
-                    text: 'lokasi harus diisi',
+                    text: '{{ $message }}',
                     icon: 'error',
                     confirmButtonText: 'kembali ke transaksi'
                 })
-                event.preventDefault();
-            }
-            if (tanggalPick.trim() === "") {
-                // console.log("tanggal harus diisi");
+            @endif
+
+            @if ($message = Session::get('approved'))
                 Swal.fire({
-                    title: 'Error',
-                    text: 'tanggal harus diisi',
-                    icon: 'error',
-                    confirmButtonText: 'kembali ke transaksi'
+                    title: 'Success',
+                    text: '{{ $message }}',
+                    icon: 'success',
+                    confirmButtonText: 'kembali ke transaksi',
+
                 })
-                event.preventDefault();
+            @endif
+
+
+
+            function validateForm() {
+
+                let lokasi = document.getElementById("lokasi").value;
+                let tanggalPick = document.getElementById("tanggalPick").value;
+                let waktuPick = document.getElementById("waktuPick").value;
+                let hargaWant = document.getElementById("hargaWant").value;
+
+                if (lokasi.trim() === "") {
+                    // console.log("lokasi harus diisi");
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'lokasi harus diisi',
+                        icon: 'error',
+                        confirmButtonText: 'kembali ke transaksi'
+                    })
+                    event.preventDefault();
+                }
+                if (tanggalPick.trim() === "") {
+                    // console.log("tanggal harus diisi");
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'tanggal harus diisi',
+                        icon: 'error',
+                        confirmButtonText: 'kembali ke transaksi'
+                    })
+                    event.preventDefault();
+                }
+                if (waktuPick.trim() === "") {
+                    // console.log("waktu harus diisi ");
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'waktu harus diisi',
+                        icon: 'error',
+                        confirmButtonText: 'kembali ke transaksi'
+                    })
+                    event.preventDefault();
+                }
+                if (hargaWant.trim() === "") {
+                    // console.log("harga harus diisi ");
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'harga harus diisi',
+                        icon: 'error',
+                        confirmButtonText: 'kembali ke transaksi'
+                    })
+                    event.preventDefault();
+                }
             }
-            if (waktuPick.trim() === "") {
-                // console.log("waktu harus diisi ");
-                Swal.fire({
-                    title: 'Error',
-                    text: 'waktu harus diisi',
-                    icon: 'error',
-                    confirmButtonText: 'kembali ke transaksi'
-                })
-                event.preventDefault();
-            }
-            if (hargaWant.trim() === "") {
-                // console.log("harga harus diisi ");
-                Swal.fire({
-                    title: 'Error',
-                    text: 'harga harus diisi',
-                    icon: 'error',
-                    confirmButtonText: 'kembali ke transaksi'
-                })
-                event.preventDefault();
-            }
-        }
 
-        // Set the value using JavaScript after the page has loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            var currentDate = new Date(); // or get the date from your server or other sources
-            var formattedDate = currentDate.toISOString().slice(0, 10);
+            // Set the value using JavaScript after the page has loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                var currentDate = new Date(); // or get the date from your server or other sources
+                var formattedDate = currentDate.toISOString().slice(0, 10);
 
-            document.getElementById('tanggalPick').value = formattedDate;
+                document.getElementById('tanggalPick').value = formattedDate;
 
-            var currentTime = new Date();
-            var hours = currentTime.getHours();
-            let minutes = currentTime.getMinutes() + 5;
+                var currentTime = new Date();
+                let hours = currentTime.getHours();
+                let minutes = currentTime.getMinutes() + 5;
+                // let second = currentTime.getSeconds();
+                
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                } else if (minutes > 59) {
+                    let addHours = Math.floor(minutes / 60)
 
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            if (hours < 10) {
-                hours = "0" + hours;
-            }
+                    currentTime.setHours(currentTime.getHours() + addHours)
+                    currentTime.setMinutes(minutes % 60);
+                }
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
 
-            var formattedTime = hours + ":" + minutes;
+                var formattedTime = hours + ":" + minutes;
 
-            document.getElementById('waktuPick').value = formattedTime;
-            // console.log(currentDate);
-            console.log(formattedTime);
-            // console.log(minutes);
-        });
-    </script>
+                document.getElementById('waktuPick').value = formattedTime;
+                // console.log(currentDate);
+                // console.log(formattedTime);
+                // console.log(minutes);
+            });
+        </script>
     @endsection
 </body>
 
