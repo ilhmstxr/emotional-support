@@ -19,89 +19,93 @@
     font-style: normal;
 }
 
-.body{
+.body {
     margin: 0px;
     padding: 0px;
 }
 
-.hpoppins{
+.hpoppins {
     font-family: 'Poppins', sans-serif;
 }
 
 
-.pSora{
+.pSora {
     font-family: 'Sora', sans-serif;
 }
 
-.homegutter{
+.homegutter {
     padding-left: 0px;
 }
 
 
-.homegutter .gx-5 > .col {
+.homegutter .gx-5>.col {
     font-family: 'Sora', sans-serif;
 }
 
 
-    .homegutter .gx-5 > .col {
-        border-style: solid;
-        border-color: black;
-        border-radius: 5px;
-        border-width: 1px 1px 1px 1px;
-        padding: 10px;
+.homegutter .gx-5>.col {
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 1px 1px 1px 1px;
+    padding: 10px;
 
-    }
-    .homegutter .gx-5 > .col + .col {
-        margin-left: 1.5rem; 
-        }
-
-    .textJ{
-        text-align: justify;
-    }
-
-    .bgfooter-text{
-        background-image: url('/img/footerbg.png'); 
-        background-size: cover; 
-        padding: 20px;
-        z-index: 0;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    
 }
 
-    .bgfooter-text .list-group-item {
-        background-color: transparent;
-        border: none; 
-    }
+.homegutter .gx-5>.col+.col {
+    margin-left: 1.5rem;
+}
 
-    .footer-grid {
+.textJ {
+    text-align: justify;
+}
+
+.bgfooter-text {
+    background-image: url('/img/footerbg.png');
+    background-size: cover;
+    padding: 20px;
+    z-index: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.bgfooter-text .list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
 
-.listNoDots{
+.listNoDots {
     list-style: none;
 }
 
 
 .line {
-        border-bottom: 1px solid white; /* Add a white bottom border with 1px thickness */
-        margin-bottom: 10px; /* Add margin for better spacing, adjust as needed */
-    }
+    border-bottom: 1px solid white;
+    /* Add a white bottom border with 1px thickness */
+    margin-bottom: 10px;
+    /* Add margin for better spacing, adjust as needed */
+}
 
 .no-underline {
-        text-decoration: none; /* Remove underline */
-    }
+    text-decoration: none;
+    /* Remove underline */
+}
 
-.wbutton-outline{
+.wbutton-outline {
     color: #2D9CDB;
     background-color: #FFFFFF;
     border-color: #2D9CDB;
@@ -111,7 +115,7 @@
     margin-bottom: 5px;
 }
 
-.bbutton-outline{
+.bbutton-outline {
     color: #FFFFFF;
     background-color: #2D9CDB;
     border-color: #FFFFFF;
@@ -121,7 +125,7 @@
     margin-bottom: 5px;
 }
 
-.busybutton-outline{
+.busybutton-outline {
     color: #FFFFFF;
     background-color: #FFAA4A;
     border-color: #FFFFFF;
@@ -131,23 +135,23 @@
     margin-bottom: 5px;
 }
 
-.figure-profile{
+.figure-profile {
     border-radius: 7px;
     border-color: #000000;
     border-width: 2px;
     text-align: center;
 }
 
-.border-profile{
+.border-profile {
     margin-top: 5px;
     margin-bottom: 20px;
     margin-left: 30px;
     margin-right: 30px;
     border: 1px solid #808080;
-    
+
 }
 
-.border-hk{
+.border-hk {
 
     border: 1px solid #EAEAEA;
     border-radius: 6px;
@@ -155,22 +159,45 @@
 
 }
 
-.underline{
+.underline {
     border-bottom: 2px #2D9CDB;
     display: inline-block;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.create-content-forum{
+.create-content-forum {
     border: 1px solid #EAEAEA;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
-    /* View Mobile */
-    /* View Mobile */
-    /* View Mobile */
+
+.create-content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.react-content {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+
+}
+
+.content {
+    font-family: 'Sora',sans-serif;
+    padding-left:30px ;
+}
+
+input{
+    border-color: #808080 !important;
+}
+/* View Mobile */
+/* View Mobile */
+/* View Mobile */
 
 /* @media (min-width: 576p){
     .homegutter{
