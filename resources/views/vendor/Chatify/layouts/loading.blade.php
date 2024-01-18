@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>loading ajah pokoknya</h1>
+    <h1>Loading...</h1>
 </body>
 </html>
