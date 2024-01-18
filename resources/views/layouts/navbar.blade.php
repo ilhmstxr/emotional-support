@@ -25,7 +25,7 @@
                             <a class="nav-link me-5" aria-current="page" href="/menu" style="color: #2D9CDB; font-weight:650;">Beranda</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/curhat">Curhat</a>
+                            <a class="nav-link" href="/curhatonline">Curhat</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link" href="/psikolog">Psikolog</a>
