@@ -16,11 +16,15 @@ class TransactionController extends Controller
         // return $request;
         $price_check = consultantInfo::get();
 
-        $minimum_price = consultantInfo::min('price');
+        $minimum_price = consultantInfo::min('price_meet');
+        // return $request;
 
         Carbon::setLocale('id');
 
+        // return $request;
+        $tipe = $request->tipe;
         $time = $request->waktu;
+        $harga = $request->harga;
         $date = Carbon::now()->setTimezone('Asia/Jakarta');;
         $currentTime = $date->format('H:i');
 
@@ -30,13 +34,17 @@ class TransactionController extends Controller
             return redirect()->back()->with('denied', "tidak boleh kurang dari waktu");
         }
 
-        if (is_null($request->harga)) {
+        if (is_null($harga)) {
             return redirect()->back()->with('denied', 'minimal ga gratis');
-        } else if ($request->harga < $minimum_price) {
-            return redirect()->back()->with('denied', 'kemurahen jancok munggahno titik')->with('advice', "saran kami dinaikin minimal $minimum_price");
+        } else if ($harga < $minimum_price) {
+            return redirect()->back()->with('denied', "harga terlalu murah naikan harga minimal $minimum_price");
         }
-        // foreach ($price_check as $p) {
-        // }
+
+        $consultant = consultantInfo::where('price_meet', '>=', $harga)->get();
+        // return $consultant;
+        // $tipe = 
+        $compact = ['consultant', 'tipe'];
+        return view('psikolog', compact($compact));
     }
     /**
      * Display a listing of the resource.
