@@ -11,12 +11,13 @@ class AuthController extends Controller
      */
     public function indexLogin()
     {
-        return view('auth.login');
+        // return view('auth.login2');
     }
 
     public function indexRegister()
     {
-        return view('auth.register');
+        return "register";
+        // return view('auth.register');
     }
 
     /**
