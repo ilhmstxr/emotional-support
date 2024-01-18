@@ -29,6 +29,16 @@ class MenuController extends Controller
         return view('curhat');
     }
 
+    public function indexForum()
+    {
+        return view('forum');
+    }
+
+    public function indexHubungiKami()
+    {
+        return view('hubungikami');
+    }
+
 
     public function indexJT()
     {
@@ -46,8 +56,18 @@ class MenuController extends Controller
 
     public function indexPsikolog()
     {
+        $consultant = consultantInfo::all();
+        $compact = ['consultant'];
+        return view('psikolog', compact($compact));
+    }
 
-        return view('psikolog');
+    public function indexProfilePsikolog(Request $request)
+    {
+        $id = $request->id;
+        $consultant = consultantInfo::find($id);
+        // return $consultant;
+        $compact = ['consultant'];
+        return view('profilepsikolog', compact($compact));
     }
 
     public function indexChat()

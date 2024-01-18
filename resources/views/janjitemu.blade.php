@@ -11,6 +11,18 @@
 
 <body>
     @section('content')
+        @if ($message = Session::get('denied'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+        @if ($message = Session::get('advice'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
 
         <div class="d-block p-5 text-center">
             <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
@@ -34,42 +46,42 @@
             </div>
             <div class="container" style="background-color: #2D9CDB;">
                 <div class="row">
-                <form action="{{ route('transaction.check_order') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
-                        <input type="text" class="form-control" id="yourLocation" value="">
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="kiri">
-
-                            <input type="date" class="form-control" id="tanggalPick" placeholder="Pilih tanggal "
-                                min="{{ today()->format('Y-m-d') }}">
+                    <form action="{{ route('transaction.check_order') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="lokasiNow" class="form-label hpoppins m-1 text-light">Lokasi Anda Sekarang :</label>
+                            <input type="text" class="form-control" id="yourLocation" value="" name="lokasi">
                         </div>
-                        <div class="kanan">
 
-                            <input type="time" class="form-control" id="waktuPick" placeholder="Pilih waktu"
-                                min="{{ today()->format('H:i') }}">
+                        <div class="mb-3">
+                            <div class="kiri">
+
+                                <input type="date" class="form-control" id="tanggalPick" placeholder="Pilih tanggal "
+                                    min="{{ today()->format('Y-m-d') }}" name="tanggal">
+                            </div>
+                            <div class="kanan">
+
+                                <input type="time" class="form-control" id="waktuPick" placeholder="Pilih waktu"
+                                    min="{{ today()->format('H:i') }}" name="waktu">
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="mb-3">
-                        <input type="number" class="form-control" id="hargaWant"
-                            placeholder="Masukan Harga yang anda inginkan">
-                    </div>
-                    <button class="wbutton-outline hpoppins" type="submit">Cari Psikolog</button>
-                </form>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="hargaWant"
+                                placeholder="Masukan Harga yang anda inginkan" name="harga">
+                        </div>
+                        <button class="wbutton-outline hpoppins" type="submit">Cari Psikolog</button>
+                    </form>
                 </div>
-              </div>
+            </div>
         </div>
 
         <!-- MAPS -->
         <!-- MAPS -->
         <!-- MAPS -->
 
-    
+
 
     @endsection
 
@@ -87,16 +99,21 @@
             var formattedDate = currentDate.toISOString().slice(0, 10);
 
             document.getElementById('tanggalPick').value = formattedDate;
-        });
 
-        document.addEventListener('DOMContentLoaded', function() {
             var currentTime = new Date();
             var hours = currentTime.getHours();
-            var minutes = currentTime.getMinutes();
+            let minutes = currentTime.getMinutes();
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
 
             var formattedTime = hours + ":" + minutes;
 
             document.getElementById('waktuPick').value = formattedTime;
+            // console.log(currentDate);
+            console.log(formattedTime);
+            // console.log(minutes);
         });
     </script>
 </body>

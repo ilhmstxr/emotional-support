@@ -2,32 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\consultantInfo;
 use App\Models\transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+
+use function PHPUnit\Framework\isNull;
 
 class TransactionController extends Controller
 {
-    public function check_order(){
-        
-        $minRand  = 100000000000;
-        $maxRand  = 999999999999;
+    public function check_order(Request $request)
+    {
+        // return $request;
+        $price_check = consultantInfo::get();
 
-        $check = false;
-        do {
-            $randomNumber = random_int($minRand, $maxRand);
-            $transaction_id_check = transaction::all();
-            foreach ($transaction_id_check as $transaction_id) {
-                if ($transaction_id->transaction_id == $randomNumber) {
-                    $check = true;
-                }
-            }
-            $check = false;
-        } while ($check);
+        $minimum_price = consultantInfo::min('price');
 
-        $id = $randomNumber;
+        Carbon::setLocale('id');
 
+        $time = $request->waktu;
+        $date = Carbon::now()->setTimezone('Asia/Jakarta');;
+        $currentTime = $date->format('H:i');
 
-        
+        // return $currentTime;
+        // time is 13:05
+        if ($time < $currentTime) {
+            return redirect()->back()->with('denied', "tidak boleh kurang dari waktu");
+        }
+
+        if (is_null($request->harga)) {
+            return redirect()->back()->with('denied', 'minimal ga gratis');
+        } else if ($request->harga < $minimum_price) {
+            return redirect()->back()->with('denied', 'kemurahen jancok munggahno titik')->with('advice', "saran kami dinaikin minimal $minimum_price");
+        }
+        // foreach ($price_check as $p) {
+        // }
     }
     /**
      * Display a listing of the resource.
@@ -50,7 +59,38 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $minRand  = 100000000000;
+        $maxRand  = 999999999999;
+
+        $check = false;
+        do {
+            $randomNumber = random_int($minRand, $maxRand);
+            $transaction_id_check = transaction::all();
+            foreach ($transaction_id_check as $transaction_id) {
+                if ($transaction_id->transaction_id == $randomNumber) {
+                    $check = true;
+                }
+            }
+            $check = false;
+        } while ($check);
+
+        $id = $randomNumber;
+
+        $tipe = $request->tipe;
+        $sesi = $request->value;
+
+        $insert_transatcion = [
+            // 'transaction_id' => $this->check_order(),
+            'type' => $tipe,
+            // 'transaction_id' => $sesi,
+            'customers_id' => 1,
+            'consultant_id' => 2,
+            'price' => 40000,
+        ];
+
+        transaction::create($insert_transatcion);
+
+        return redirect()->back();
     }
 
     /**

@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->foreignId('customers_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('consultant_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('option');
-            $table->string('total_sessions');
+            // $table->string('year');
+            // $table->string('month');
+            // $table->string('date');
+            // $table->string('total_sessions');
+            $table->string('type');
             $table->integer('price');
             $table->timestamps();
         });

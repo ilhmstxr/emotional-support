@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('consultant_infos', function (Blueprint $table) {
             $table->id();
-            $table->integer('price');
+            $table->text('bio');
+            $table->text('case');
+            $table->integer('price_online');
+            $table->integer('price_meet');
             $table->string('degree');
             $table->string('expert_in');
             $table->integer('sessions');
             $table->integer('helped');
+            $table->string('status');
             $table->foreignId('consultant_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });

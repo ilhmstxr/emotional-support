@@ -31,6 +31,8 @@ const initMap = async () => {
         lng: longitude,
     };
 
+    // console.log(pos);
+
     // get location
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
@@ -65,6 +67,7 @@ const initMap = async () => {
 
                 // putting the address in location
                 document.getElementById("yourLocation").value = address;
+                // console.log(address);
 
                 infoWindow.setContent(address);
                 infoWindow.open(map, marker);
@@ -75,35 +78,35 @@ const initMap = async () => {
         });
 };
 
-const find = async () => {
-    try {
-        await getCurrentPosition();
+// const find = async () => {
+//     try {
+//         await getCurrentPosition();
 
-        const pos = {
-            lat: latitude,
-            lng: longitude,
-        };
+//         const pos = {
+//             lat: latitude,
+//             lng: longitude,
+//         };
 
-        const response = await fetch(
-            `https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${apiKey}&location=${pos.lat},${pos.lng}&radius=500&type=user_defined_place_type`,
-            { mode: "no-cors" }
-        );
-        const data = await response.json();
+//         const response = await fetch(
+//             `https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${apiKey}&location=${pos.lat},${pos.lng}&radius=500&type=user_defined_place_type`,
+//             { mode: "no-cors" }
+//         );
+//         const data = await response.json();
 
-        const nearbyUsers = data.results.map((place) => ({
-            name: place.name,
-            address: place.vicinity,
-            latitude: place.geometry.location.lat,
-            longitude: place.geometry.location.lng,
-        }));
+//         const nearbyUsers = data.results.map((place) => ({
+//             name: place.name,
+//             address: place.vicinity,
+//             latitude: place.geometry.location.lat,
+//             longitude: place.geometry.location.lng,
+//         }));
 
-        // console.log("done");
-        console.log(nearbyUsers);
-        console.log("done");
-    } catch (error) {
-        console.log(error);
-    }
-};
+//         // console.log("done");
+//         console.log(nearbyUsers);
+//         console.log("done");
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
-find();
+// find();
 window.initMap = initMap;
