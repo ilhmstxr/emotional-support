@@ -49,11 +49,11 @@
 
                         <div class="mb-3 mx-0" style="display: inline-flex;">
                             <input class="pSora"
-                                style="width: 635px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
+                                style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
                                 type="date" id="tanggalPick" placeholder="Pilih tanggal "
                                 min="{{ today()->format('Y-m-d') }}" name="tanggal">
                             <input class="pSora"
-                                style="width: 635px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
+                                style="width: 612px; border-radius:4px; padding:2px; color:#828282; border-color:#FFFFFF;"
                                 type="time" id="waktuPick" placeholder="Pilih waktu" min="{{ today()->format('H:i') }}"
                                 name="waktu">
                         </div>

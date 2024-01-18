@@ -46,8 +46,10 @@
                             <form action="{{ route('profilepsikolog', $c->user->id) }}">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $c->user->id }}">
-                                <p>harga janji temu{{ $c->price_meet }}</p>
-                                <p>harga online{{ $c->price_online }}</p>
+                                <div>
+                                <figcaption class="pSora" style="text-align: left; color:#808080;">Harga Janji Temu : Rp {{ $c->price_meet }}</figcaption>
+                                <figcaption class="pSora" style="text-align: left; color:#808080;">Harga Online : Rp {{ $c->price_online }}</figcaption>
+                                </div>
                                 <button type="submit" class="btn btn-outline text-start pSora my-2"
                                     style="color : #2D9CDB; border-color : #2D9CDB; border-radius: 7px; float:inline-start">
                                     Profile Lengkap</button><br><br>
