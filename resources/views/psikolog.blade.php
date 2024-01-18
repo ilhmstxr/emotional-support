@@ -37,7 +37,7 @@
                 @foreach ($consultant as $c)
                     <div class="col-md-4 border-profile text-center">
                         <figure>
-                            <img src="{{ 'img/logoSHEA.png' }}" class="rounded-circle" style="padding-top: 20px;"
+                            <img src="{{ '/img/logoSHEA.png' }}" class="rounded-circle" style="padding-top: 20px;"
                                 width="130px">
                             <figcaption class="pSora pt-2" style="text-align: left; font-weight:bold;">{{ $c->user->name }},
                                 {{ $c->degree }}</figcaption>

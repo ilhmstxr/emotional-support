@@ -24,9 +24,12 @@ class TransactionController extends Controller
         // return $request;
         $tipe = $request->tipe;
         $time = $request->waktu;
+        $date = $request->tanggal;
         $harga = $request->harga;
-        $date = Carbon::now()->setTimezone('Asia/Jakarta');;
-        $currentTime = $date->format('H:i');
+        $fetch = [$tipe, $time, $date, $harga];
+        // return $fetch;
+        $now = Carbon::now()->setTimezone('Asia/Jakarta');;
+        $currentTime = $now->format('H:i');
 
         // return $currentTime;
         // time is 13:05
@@ -43,7 +46,7 @@ class TransactionController extends Controller
         $consultant = consultantInfo::where('price_meet', '>=', $harga)->get();
         // return $consultant;
         // $tipe = 
-        $compact = ['consultant', 'tipe'];
+        $compact = ['consultant', 'tipe', 'fetch'];
         return view('psikolog', compact($compact));
     }
     /**
@@ -86,6 +89,7 @@ class TransactionController extends Controller
 
         $tipe = $request->tipe;
         $sesi = $request->value;
+        $harga = $request->harga;
 
         $insert_transatcion = [
             // 'transaction_id' => $this->check_order(),

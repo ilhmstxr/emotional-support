@@ -16,10 +16,16 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
         "@googlemaps/google-maps-services-js": "^3.3.42",
+        "@mui/material": "^5.15.5",
         "google-map-react": "^2.2.1",
         "jquery": "^3.7.1",
         "nodemon": "^3.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "star-rating.js": "^4.3.0",
         "sweetalert2": "^11.10.3"
     }
 }

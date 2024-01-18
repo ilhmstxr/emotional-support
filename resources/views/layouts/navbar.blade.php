@@ -28,7 +28,7 @@
                             <a class="nav-link" href="/curhatonline">Curhat</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a class="nav-link" href="/psikolog">Psikolog</a>
+                            <a class="nav-link" href="/psikolog">Sobat SHEA</a>
                         </li>
                         <li class="nav-item me-5">
                             <a class="nav-link" href="/forum">Forum</a>
