@@ -33,8 +33,8 @@
 
 
         <div class="container">
-            @foreach ($consultant as $c)
-                <div class="row row-col-2">
+                <div class="row" style="margin-left:200px;">
+                     @foreach ($consultant as $c)
                     <div class="col-md-4 border-profile text-center">
                         <figure>
                             <img src="{{ 'img/logoSHEA.png' }}" class="rounded-circle" style="padding-top: 20px;"
@@ -81,8 +81,9 @@
                             @endif
                         </div>
                     </div>
+                    @endforeach
                 </div>
-            @endforeach
+            
         </div>
 
 
