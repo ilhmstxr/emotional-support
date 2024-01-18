@@ -11,18 +11,6 @@
 
 <body>
     @section('content')
-        @if ($message = Session::get('denied'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
-                <strong>{{ $message }}</strong>
-            </div>
-        @endif
-        @if ($message = Session::get('advice'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="btn-close" data-bs-dimsiss="alert"></button>
-                <strong>{{ $message }}</strong>
-            </div>
-        @endif
 
         <div class="d-block p-5 text-center">
             <a href="/curhatonline" class="btn hpoppins" style="color: #2D9CDB; border-color:#2D9CDB;" role="button">
@@ -95,6 +83,16 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        @if ($message = Session::get('denied'))
+            Swal.fire({
+                title: 'Error',
+                text: '{{ $message }}',
+                icon: 'error',
+                confirmButtonText: 'kembali ke transaksi'
+            })
+        @endif
+
+
         function validateForm() {
 
             let lokasi = document.getElementById("lokasi").value;
